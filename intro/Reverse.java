@@ -1,16 +1,20 @@
+package intro;
+
 import java.util.Scanner;
 
-public class MultTable {
+public class Reverse {
     public static void main(String[] args) {
         int n;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a natural number: ");
         n = sc.nextInt();
 
-        for (int i = 1; i <= 10; i++)
-        {
-            System.out.println(n + " x " + i + " = " + (n*i));
+        for (int i = n; i > 0; i--) {
+            System.out.print(i);
+            System.out.print(" ");
         }
+
+        System.out.println();
 
         sc.close();
     }

@@ -1,3 +1,5 @@
+package intro;
+
 import java.util.Scanner;
 
 public class LuckyNumber {

@@ -1,6 +1,8 @@
+package intro;
+
 import java.util.Scanner;
 
-public class StarInvertedTriangle {
+public class NumTriangle {
     public static void main(String[] args) {
         int n;
         Scanner sc = new Scanner(System.in);
@@ -9,9 +11,9 @@ public class StarInvertedTriangle {
         
         for (int i = 1; i <= n; i++)
         {
-            for (int j = n; j >= i; j--)
+            for (int j = 1; j <= i; j++)
             {
-                System.out.print("* ");
+                System.out.print(j + " ");
             }
 
             System.out.println();

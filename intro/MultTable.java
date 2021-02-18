@@ -1,18 +1,18 @@
+package intro;
+
 import java.util.Scanner;
 
-public class Natural {
+public class MultTable {
     public static void main(String[] args) {
-        int n, sum = 0;
+        int n;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a natural number: ");
         n = sc.nextInt();
 
-        for (int i = 1; i <= n; i++) {
-            sum = sum + i;
+        for (int i = 1; i <= 10; i++)
+        {
+            System.out.println(n + " x " + i + " = " + (n*i));
         }
-
-        System.out.print("Sum is: ");
-        System.out.println(sum);
 
         sc.close();
     }

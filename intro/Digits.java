@@ -1,22 +1,22 @@
+package intro;
+
 import java.util.Scanner;
 
-public class SumDigits {
+public class Digits {
     public static void main(String[] args) {
         int n;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a natural number: ");
         n = sc.nextInt();
 
-        System.out.print("Sum of digits of " + n + " is: ");
-        int sum = 0, digit;
+        System.out.println("Last digit is: " + (n % 10));
 
-        while (n > 0) {
-            digit = n % 10;
-            sum += digit;
+        while(n > 10)
+        {
             n = n / 10;
         }
 
-        System.out.println(sum);
+        System.out.println("First digit is: " + n);
 
         sc.close();
     }
