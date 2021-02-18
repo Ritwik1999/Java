@@ -11,6 +11,8 @@ public class IdentityMatrix {
         int matrix[][] = new int[order][order];
         boolean is_identity = true;
 
+        System.out.println("Enter the elements of the matrix:");
+
         for (int i = 0; i < order; i++)
         {
             for (int j = 0; j < order; j++)

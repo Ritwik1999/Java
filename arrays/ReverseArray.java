@@ -18,6 +18,8 @@ public class ReverseArray {
             arr[i] = input.nextInt();
         }
 
+        System.out.print("Reverse array is: ");
+
         int temp;
 
         for (int k = 0; k < n/2; k++)
