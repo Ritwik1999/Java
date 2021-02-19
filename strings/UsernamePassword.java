@@ -27,7 +27,7 @@ public class UsernamePassword {
                 System.out.println("Password has to be a minimum of 8 characters");
             }
 
-            if (password.contains(username.toLowerCase())) {
+            if (password.contains(username)) {
                 System.out.println("Password cannot contain username");
             }
 
