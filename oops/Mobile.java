@@ -18,6 +18,8 @@ public class Mobile {
         company = input.nextLine();
         price = Integer.parseInt(input.nextLine());
         yearOfManufacture = input.nextLine();
+
+        System.out.println();
     }
 
     static void sort_mobileDetails(Mobile mobiles[])
@@ -54,6 +56,7 @@ public class Mobile {
     public static void main(String[] args) {
         Mobile mobiles[] = new Mobile[5];
 
+        System.out.println();
         for (int i = 0; i < mobiles.length; i++)
         {
             mobiles[i] = new Mobile();

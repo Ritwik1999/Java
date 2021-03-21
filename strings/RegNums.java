@@ -7,6 +7,8 @@ public class RegNums {
         Scanner input = new Scanner(System.in);
         String regnos[] = new String[5];
 
+        System.out.println("\nEnter 5 registration numbers: ");
+
         for (int i = 0; i < regnos.length; i++)
         {
             regnos[i] = input.nextLine();
@@ -34,13 +36,14 @@ public class RegNums {
 
         if (count_scope == 0 && count_sense == 0)
         {
-            System.out.println("There are no students from SCOPE and SENSE school");
+            System.out.println("There are no students from SCOPE and SENSE school\n");
         }
 
         else
         {
             System.out.println("SCOPE count: " + count_scope);
             System.out.println("SENSE count: " + count_sense);
+            System.out.println();
         }
 
         input.close();

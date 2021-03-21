@@ -1,7 +1,5 @@
 package oops;
 
-import java.util.Scanner;
-
 public class Product {
 
     String id;
@@ -11,18 +9,13 @@ public class Product {
     String mfd;
     int price;
 
-    void setDetails() {
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Enter serial number, price, id, name, company, manufacturing date:");
-
-        sno = Integer.parseInt(input.nextLine());
-        price = Integer.parseInt(input.nextLine());
-        id = input.nextLine();
-        name = input.nextLine();    
-        company = input.nextLine();
-        mfd = input.nextLine();
-        
+    Product(String id, String name, int sno, String company, String mfd, int price) {
+        this.id = id;
+        this.name = name;
+        this.sno = sno;
+        this.company = company;
+        this.mfd = mfd;
+        this.price = price;
     }
 
     void displayDetails() {
@@ -32,15 +25,17 @@ public class Product {
         System.out.println("Product Company: " + company);
         System.out.println("Product Manufacturing Date: " + mfd);
         System.out.println("Product Price: " + price);
+        System.out.println();
     }
 
     public static void main(String[] args) {
-        Product products[] = new Product[2];
+        Product products[] = new Product[5];
 
-        for (int i = 0; i < products.length; i++) {
-            products[i] = new Product();
-            products[i].setDetails();
-        }
+        products[0] = new Product("P1", "Galaxy A15", 1, "Samsung", "25dec2015", 20000);
+        products[1] = new Product("P2", "Eleczy...", 2, "Harley", "15aug2011", 100000);
+        products[2] = new Product("P3", "Yogabook 13 laptop", 3, "Lenovo", "26jan2018", 65000);
+        products[3] = new Product("P4", "Wireless Headphones", 4, "MiVi", "14feb2019", 5000);
+        products[4] = new Product("P5", "Galaxy Earbuds", 5, "Samsung", "25dec2021", 10000);
 
         samsungProducts(products);
         mfdRange(products);

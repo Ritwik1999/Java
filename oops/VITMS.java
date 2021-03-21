@@ -181,6 +181,7 @@ class Programme {
 
 public class VITMS {
     public static void main(String[] args) {
+        System.out.println();
         new Student("Ritwik Neema", "18BCE2166").display();
         new Faculty("XYZ", "12345").display();
         new Hostel("Dr. Sarvepalli Radharkrishnan Block", 'K', 900, 'M').display();
@@ -191,5 +192,6 @@ public class VITMS {
         new SoftSkills("SMART", "contact@smart.com").display();
         new VITCourse("Java Programming", "CSE1007", "SCOPE").display();
         new Programme("Bachelor of Technology", 4).display();
+        System.out.println();
     }
 }

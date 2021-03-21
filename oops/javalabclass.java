@@ -2,8 +2,10 @@ package oops;
 
 public class javalabclass {
     public static void main(String[] args) {
+        System.out.println();
         professor satish = new professor("satish", "vellore", "111", "a06");
         satish.display_professor();
+        System.out.println();
     }
 }
 

@@ -9,6 +9,8 @@ public class Notbec {
         String regno;
         int i = 0;
 
+        System.out.println("----------Enter Numbers---------");
+
         while (i < 5) {
             regno = input.next();
             if (!regno.contains("BEC")) {
@@ -19,6 +21,8 @@ public class Notbec {
         }
 
         sort(regnos);
+
+        System.out.println("----------Sorted Numbers---------");
 
         for (String id : regnos) {
             System.out.println(id);

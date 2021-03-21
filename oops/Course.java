@@ -15,6 +15,8 @@ public class Course {
         id = input.nextLine();
         type = input.nextLine();
         offeredBy = input.nextLine();
+
+        System.out.println();
     }
 
     public static void search_courseDetails(Course c[]) {
@@ -29,8 +31,12 @@ public class Course {
                 pe_count++;
             }
 
-            else {
+            else if (c[i].type.contains("PC")) {
                 pc_count++;
+            }
+
+            else {
+                continue;
             }
         }
 
@@ -46,6 +52,7 @@ public class Course {
     public static void main(String[] args) {
         Course courses[] = new Course[5];
 
+        System.out.println();
         for (int i = 0; i < courses.length; i++) {
             courses[i] = new Course();
         }

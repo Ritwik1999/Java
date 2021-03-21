@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class WeakPassword {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter username: ");
+        System.out.print("\nEnter username: ");
         String username = input.nextLine();
         System.out.print("Enter password: ");
         String password = input.nextLine();
@@ -16,7 +16,7 @@ public class WeakPassword {
             String subName = username.substring(i, i+3);
             if (password.contains(subName))
             {
-                System.out.println("Weak Password");
+                System.out.println("Weak Password\n");
                 weak = true;
                 break;
             }
@@ -24,7 +24,7 @@ public class WeakPassword {
 
         if(!weak)
         {
-            System.out.println("Strong Password");
+            System.out.println("Strong Password\n");
         }
 
         input.close();

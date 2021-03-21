@@ -26,7 +26,7 @@ public class SubStringReversal {
             }
         }
 
-        System.out.println("Text with words reversed: ");
+        System.out.println("\nText with words reversed: ");
         System.out.println(str);
 
         input.close();

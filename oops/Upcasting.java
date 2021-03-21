@@ -76,9 +76,11 @@ public class Upcasting {
         shapes[2] = new Cone(4, 7);
         shapes[3] = new Cube(5);
 
+        System.out.println();
         for (int i = 0; i < shapes.length; i++)
         {
             shapes[i].compute_volume();
         }
+        System.out.println();
     }
 }

@@ -6,14 +6,14 @@ public class PassCount {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
-        System.out.print("Enter number of semesters: ");
+        System.out.print("\nEnter number of semesters: ");
         int nrow = input.nextInt();
 
         int marks[][] = new int[nrow][];
 
         for (int i = 0; i < nrow; i++)
         {
-            System.out.print("How many subjects in semester " + (i+1) + ": ");
+            System.out.print("How many subjects in semester " + (i+1) + "? ");
             int ncol = input.nextInt();
             marks[i] = new int[ncol];
             System.out.print("Enter marks of " + ncol + " subjects: ");
@@ -48,6 +48,6 @@ public class PassCount {
         
         System.out.println();
         System.out.println("The student has passed in " + pass_count + " subjects");
-        System.out.println("The student has failed in " + fail_count + " subjects");
+        System.out.println("The student has failed in " + fail_count + " subjects\n");
     }
 }

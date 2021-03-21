@@ -5,11 +5,13 @@ import java.util.Scanner;
 public class CountVIT {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+
+        System.out.print("\nEnter Text: ");
         String text = input.nextLine();
 
         if (!text.contains("VIT"))
         {
-            System.out.println("No such word in the sentence");
+            System.out.println("No such word in the sentence\n");
         }
 
         else
@@ -24,7 +26,7 @@ public class CountVIT {
                 }
             }
 
-            System.out.println("VIT occurs " + count + " times in the given input");
+            System.out.println("VIT occurs " + count + " times in the given input\n");
         }
 
         input.close();
