@@ -67,18 +67,36 @@ class Cube extends Shape {
     }
 }
 
+class Cuboid extends Shape {
+    double length;
+    double breadth;
+    double height;
+
+    Cuboid(double l, double b, double h) {
+        length = l;
+        breadth = b;
+        height = h;
+    }
+
+    @Override
+    void compute_volume() {
+        double volume = length * breadth * height;
+        System.out.println("Volume of cube is: " + volume);
+    }
+}
+
 public class Upcasting {
     public static void main(String[] args) {
-        Shape shapes[] = new Shape[4];
+        Shape shapes[] = new Shape[5];
 
         shapes[0] = new Sphere(7);
         shapes[1] = new Cylinder(7, 21);
         shapes[2] = new Cone(4, 7);
         shapes[3] = new Cube(5);
+        shapes[4] = new Cuboid(2, 3, 4);
 
         System.out.println();
-        for (int i = 0; i < shapes.length; i++)
-        {
+        for (int i = 0; i < shapes.length; i++) {
             shapes[i].compute_volume();
         }
         System.out.println();

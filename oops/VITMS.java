@@ -1,10 +1,10 @@
 package oops;
 
-class Student {
+class VITStudent {
     String name;
     String regno;
 
-    Student(String name, String regno) {
+    VITStudent(String name, String regno) {
         this.name = name;
         this.regno = regno;
     }
@@ -14,11 +14,11 @@ class Student {
     }
 }
 
-class Faculty {
+class VITFaculty {
     String name;
     String empid;
 
-    Faculty(String name, String empid) {
+    VITFaculty(String name, String empid) {
         this.name = name;
         this.empid = empid;
     }
@@ -182,8 +182,8 @@ class Programme {
 public class VITMS {
     public static void main(String[] args) {
         System.out.println();
-        new Student("Ritwik Neema", "18BCE2166").display();
-        new Faculty("XYZ", "12345").display();
+        new VITStudent("Ritwik Neema", "18BCE2166").display();
+        new VITFaculty("XYZ", "12345").display();
         new Hostel("Dr. Sarvepalli Radharkrishnan Block", 'K', 900, 'M').display();
         new Building("Silver Jubilee Tower", new String[] {"SCOPE", "SITE"}).display();
         new Mess("Darling", new String[] {"M", "N", "P"}, true).display();

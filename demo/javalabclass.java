@@ -1,9 +1,9 @@
-package oops;
+package demo;
 
 public class javalabclass {
     public static void main(String[] args) {
         System.out.println();
-        professor satish = new professor("satish", "vellore", "111", "a06");
+        professor satish = new professor("ritwik", "vellore", "c19", "s003");
         satish.display_professor();
         System.out.println();
     }
@@ -23,20 +23,20 @@ class person {
     }
 }
 
-class faculty extends person {
+class teacher extends person {
     public String empid;
 
-    public void display_faculty() {
+    public void display_teacher() {
         System.out.println(name + address + empid);
     }
 
-    faculty(String iname, String iaddress, String iempid) {
+    teacher(String iname, String iaddress, String iempid) {
         super(iname, iaddress);
         empid = iempid;
     }
 }
 
-class professor extends faculty {
+class professor extends teacher {
     public String cabinno;
 
     professor(String iname, String iaddress, String iempid, String icabinno) {
@@ -45,6 +45,6 @@ class professor extends faculty {
     }
 
     public void display_professor() {
-        System.out.println(name + address + empid + cabinno);
+        System.out.println(name + " " + address + " " + empid + " " + cabinno);
     }
 }
