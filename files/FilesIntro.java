@@ -49,5 +49,18 @@ public class FilesIntro {
         File obj4 = new File(obj3, "test.txt");
         System.out.println(obj4.getAbsolutePath());
         System.out.println("Is file? " + obj4.isFile());
+
+        File obj5 = new File("/home/ritwik/Desktop/Sem 6/Java");
+        String names[] = obj5.list();
+        System.out.println("-----All files in the Java directory as Strings------");
+        for (String name : names) {
+            System.out.println(name);
+        }
+
+        File files[] = obj5.listFiles();
+        System.out.println("-----All files in the Java directory as File objects------");
+        for (File file : files) {
+            System.out.println(file.getName());
+        }
     }
 }
