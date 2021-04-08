@@ -23,12 +23,13 @@ import java.io.File;
 public class FilesIntro {
     public static void main(String[] args) throws Throwable {
         // Constructor 1
-        File obj = new File("test.txt");    // This does not check if the file exists, it just creates a file object
-        System.out.println(obj.length());
-        System.out.println(File.separator); // Machine specific path delimiter, for Windows, it is \
-        System.out.println(obj.getName());
-        System.out.println(obj.getParent());
-        System.out.println(obj.getAbsolutePath());
+        File obj = new File("/home/ritwik/Desktop/Sem 6/Java/files/test.txt");    // This does not check if the file exists, it just creates a file object
+        System.out.println("Path name delimiter? " + File.separator); // Machine specific path delimiter, for Windows, it is \
+        System.out.println("Does file exist? " + obj.exists());
+        System.out.println("File length? " + obj.length());
+        System.out.println("File name? " + obj.getName());
+        System.out.println("File parent name? " + obj.getParent());
+        System.out.println("File path, absolute? " + obj.getAbsolutePath());
 
         // Constructor 2
         File obj2 = new File("/home/ritwik/Desktop/Sem 6/Java/files", "test2.txt");

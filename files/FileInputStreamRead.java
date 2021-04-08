@@ -48,13 +48,12 @@ public class FileInputStreamRead {
             File obj = new File("/home/ritwik/Desktop/Sem 6/Java/files/test.txt");
             FileInputStream fin = new FileInputStream(obj);
 
-            
             // read() - Reads a byte of data from this input Streams int data = fin.read();
             // outputs 104, i.e., h of hello in test.txt
             // int data;
             // while ((data = fin.read()) != -1) {
             // System.out.println((char)data); }
-            
+
             byte b[] = new byte[5];
             // read(byte b[], int offset, int length) - reads upto length bytes of data from
             // this input stream into an array of bytes, starting from index offset

@@ -6,7 +6,7 @@ package files;
 
 import java.io.*;
 
-public class FileReaderWrite {
+public class FileWriterWrite {
     public static void main(String[] args) throws Throwable {
         File obj = new File("files/test1.txt");
         FileWriter fiw = new FileWriter(obj, true);   // true tells fiw to append whatever is being written
