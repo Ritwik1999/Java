@@ -10,6 +10,10 @@
     > The byte stream created is platform independent. So, the object serialized on one platform can be de-serialized on a different platform 
 
     NOTE: The class whose objects would be serialized must implement the Serializable interface
+
+    > Transient variables - A transient variable is a variable that can not be serialized.
+
+    > Static variables are not for objects and hence they are not serialized
 */
 
 package files;
@@ -46,14 +50,17 @@ class Student implements Serializable {
 
     String name;
     String regno;
+    transient int k;    // will not be serialized
 
     public Student(String name, String regno) {
         this.name = name;
         this.regno = regno;
+        k = 55;
     }
 
     public void display() {
         System.out.println("Student Name: " + name);
         System.out.println("Student Registration Number: " + regno);
+        System.out.println(k);
     }
 }
