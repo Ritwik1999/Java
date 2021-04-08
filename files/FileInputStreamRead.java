@@ -1,12 +1,12 @@
 /*
     Streams are sequence of bytes, we read them from various sources, and can also write them to various sources
 
-    How to read data? (FileInputStream, e.g., System.in)
+    How to read data? (FileInputStream)
     > We can read data as 8 bit bytes
     e.g., 00000011 00001111
 
     > We can read data as characters (sequence of bytes encoded as a symbol) (FileReader)
-    i.e., as ANSI (ASCII + 128 more entities; 8 bit encoding; used by Windows), or ASCII(7 bit encoding), or Unicode(UTF-8 or UTF-16) characters
+    i.e., as ANSI (ASCII + 128 more entities; 8 bit encoding; used by Windows), or ASCII(7 bit encoding), or Unicode(UTF-8, 8 bits or UTF-16, 16 bits) characters
     e.g., h is encoded in ASCII as 104
 
     > As primitive data types
@@ -42,19 +42,19 @@ package files;
 import java.io.File;
 import java.io.FileInputStream;
 
-public class StreamRead {
+public class FileInputStreamRead {
     public static void main(String[] args) throws Throwable {
         try {
             File obj = new File("/home/ritwik/Desktop/Sem 6/Java/files/test.txt");
             FileInputStream fin = new FileInputStream(obj);
 
-            /*
-             * read() - Reads a byte of data from this input Streams int data = fin.read();
-             * outputs 104, i.e., h of hello in test.txt int data; while ((data =
-             * fin.read()) != -1) { System.out.println(data);
-             * System.out.println((char)data); }
-             */
-
+            
+            // read() - Reads a byte of data from this input Streams int data = fin.read();
+            // outputs 104, i.e., h of hello in test.txt
+            // int data;
+            // while ((data = fin.read()) != -1) {
+            // System.out.println((char)data); }
+            
             byte b[] = new byte[5];
             // read(byte b[], int offset, int length) - reads upto length bytes of data from
             // this input stream into an array of bytes, starting from index offset

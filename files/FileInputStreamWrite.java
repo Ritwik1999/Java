@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-public class StreamWrite {
+public class FileInputStreamWrite {
     public static void main(String[] args) throws Throwable {
         File obj = new File("files/testOutput.txt");
         FileOutputStream fout = new FileOutputStream(obj);
