@@ -30,7 +30,7 @@ public class ObjectSerDeser {
             // Read the oject s from the file
             ObjectInputStream objin = new ObjectInputStream(new FileInputStream(obj));
             Student s1 = null;
-            s1 = (Student)objin.readObject();
+            s1 = (Student) objin.readObject();
             objin.close();
 
             s1.display();
@@ -41,7 +41,9 @@ public class ObjectSerDeser {
     }
 }
 
-class Student implements Serializable{
+class Student implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     String name;
     String regno;
 
