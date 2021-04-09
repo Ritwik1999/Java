@@ -13,6 +13,7 @@ public class Brand {
         }
 
         brandSort(brands);
+        input.close();
     }
 
     public static void brandSort(String arr[]) {

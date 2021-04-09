@@ -27,6 +27,7 @@ class DivideByZero {
         Scanner input = new Scanner(System.in);
         a = input.nextInt();
         b = input.nextInt();
+        input.close();
     }
 
     // One might as well omit the throws clause, it is included in the signature so

@@ -1,13 +1,12 @@
 package exception;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class ExceptionsIntro {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         try {
             System.out.print("Enter a number: ");
-            Scanner input = new Scanner(System.in);
             int num = input.nextInt();
 
             if (num == 13) {
@@ -28,6 +27,8 @@ public class ExceptionsIntro {
             if (e instanceof Number15Exception) {
                 System.out.println("15 is not allowed");
             }
+        } finally {
+            input.close();
         }
     }
 }
@@ -41,12 +42,16 @@ class MyException extends Exception {
 }
 
 class Number13Exception extends MyException {
+    private static final long serialVersionUID = 1L;
+
     public Number13Exception(String S) {
         super(S);
     }
 }
 
 class Number15Exception extends MyException {
+    private static final long serialVersionUID = 1L;
+
     public Number15Exception(String S) {
         super(S);
     }
