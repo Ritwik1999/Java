@@ -9,9 +9,8 @@ public class Mobile {
     int price;
     String yearOfManufacture;
 
-    void set_mobileDetails()
+    void set_mobileDetails(Scanner input)
     {
-        Scanner input = new Scanner(System.in);
         System.out.println("Enter Mobile model, company, price, and year of manufacture:");
 
         model = input.nextLine();
@@ -60,7 +59,7 @@ public class Mobile {
         for (int i = 0; i < mobiles.length; i++)
         {
             mobiles[i] = new Mobile();
-            mobiles[i].set_mobileDetails();
+            mobiles[i].set_mobileDetails(new Scanner(System.in));
         }
 
         Mobile.sort_mobileDetails(mobiles);

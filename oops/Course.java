@@ -8,8 +8,7 @@ public class Course {
     String type;
     String offeredBy;
 
-    public void set_courseDetails() {
-        Scanner input = new Scanner(System.in);
+    public void set_courseDetails(Scanner input) {
         System.out.println("Enter course name, id, type, offered by: ");
         name = input.nextLine();
         id = input.nextLine();
@@ -50,6 +49,7 @@ public class Course {
     }
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         Course courses[] = new Course[5];
 
         System.out.println();
@@ -58,9 +58,10 @@ public class Course {
         }
 
         for (int i = 0; i < courses.length; i++) {
-            courses[i].set_courseDetails();
+            courses[i].set_courseDetails(input);
         }
 
         Course.search_courseDetails(courses);
+        input.close();
     }
 }

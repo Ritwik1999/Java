@@ -6,7 +6,7 @@ public class StudentGuardian {
     public static void main(String[] args) {
 
         Student s1 = new Student("Ritwik Neema", "18BCE2166");
-        s1.setGuardianDetails();
+        s1.setGuardianDetails(new Scanner(System.in));
         s1.displayDetails();
     }
 }
@@ -35,8 +35,7 @@ class Student {
         regNo = id;
     }
 
-    public void setGuardianDetails() {
-        Scanner input = new Scanner(System.in);
+    public void setGuardianDetails(Scanner input) {
         int n;
         System.out.print("\nEnter number of guradians (Max. 3): ");
         n = Integer.parseInt(input.nextLine());
