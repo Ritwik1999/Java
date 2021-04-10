@@ -44,12 +44,13 @@ public class StudentException {
 
     public static void main(String[] args) throws NullPointerException {
         Scanner input = new Scanner(System.in);
+        System.out.println();
         try {
-            StudentException students[] = new StudentException[5];
+            StudentException students[] = new StudentException[3];
 
             System.out.println();
             for (int i = 0; i < students.length; i++) {
-                students[i] = new StudentException();
+                // students[i] = new StudentException();   // Line (*)
                 students[i].getInfo(input);
             }
 

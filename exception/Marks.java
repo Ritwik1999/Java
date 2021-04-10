@@ -16,7 +16,7 @@ public class Marks {
         Scanner input = new Scanner(System.in);
         try {
             int n;
-            System.out.print("Enter size of marks array: ");
+            System.out.print("\nEnter size of marks array: ");
             n = input.nextInt();
             int marks[] = new int[n];
             System.out.println("Enter marks:");

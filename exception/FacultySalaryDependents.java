@@ -6,12 +6,12 @@ public class FacultySalaryDependents {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         try {
-            Faculty f1 = new Faculty("123", "Professor", "Harley", "9685039485", "31-10-1940");
+            Faculty f1 = new Faculty("123", "Professor", "Harley", "667", "31-10-1940");     // Line (*)
             Faculty f2 = new Faculty("456", "Associate Professor", "Sheldon", "9823758374", "23-02-1945");
             Faculty f3 = new Faculty("789", "Assistant Professor", "Leonard", "9784781723", "19-09-1950");
-            Faculty f4 = new Faculty("101", "TRA", "Penny", "9718203857", "25-03-1943");
+            Faculty f4 = new Faculty("101", "TRA", "", "", "");
 
-            System.out.print("Enter faculty id: ");
+            System.out.print("\nEnter faculty id: ");
             String id = input.nextLine();
 
             if (f1.getID().equals(id)) {
@@ -67,7 +67,11 @@ class Faculty {
         this.id = id;
         this.des = des;
         this.sal = this.calc_sal();
-        d = new Dependent(dname, dphone, dDOB);
+        if (this.des.equals("TRA")) {
+            d = null;
+        } else {
+            d = new Dependent(dname, dphone, dDOB);
+        }
     }
 
     public String getID() {
@@ -76,6 +80,9 @@ class Faculty {
 
     public void display() {
         System.out.println("Salary: Rs. " + sal);
+        if (d == null) {
+            return;
+        }
         System.out.println("Dependent details: ");
         d.display();
     }

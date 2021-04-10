@@ -100,13 +100,13 @@ public class ShapesException {
     public static void main(String[] args) throws NullPointerException, IndexOutOfBoundsException {
         Scanner input = new Scanner(System.in);
         Shape shapes[] = new Shape[4];
+        System.out.println();
 
         try {
             shapes[0] = new Circle(input);
             shapes[1] = new Square(input);
             shapes[2] = new Cube(input);
             shapes[3] = new Sphere(input);
-            shapes[4] = new Cube(input);
 
             for (int i = 0; i < shapes.length; i++) {
                 shapes[i].compute_area();
