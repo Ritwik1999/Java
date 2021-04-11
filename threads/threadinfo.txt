@@ -1,0 +1,21 @@
+> A thread is an independent path of execution within a program
+> Many threads can run concurrently within a program
+> All java programs have at least one thread, known as the main thread, which
+is created by the JVM at the program's start, when the main() method is invoked
+with the main thread
+
+Methods for creating threads
+1. Extend thread class and override it's run method
+    public Thread()
+    public Thread(String name)
+
+2. Implementing Runnable interface (Runnable is an interface with only one abstract method run)
+    public Thread(Runnable target)
+    public Thread(Runnable target, String name)
+
+Prefer method 2 as you do not have to extend the Thread class in it, rather you can extend some other class, if need be.
+
+Memory Allocation in threads
+    > Every thread gets a (mini) stack memory allocated to it within the Stack memory.
+    > This (mini) stack is called the thread's stack frame
+    > Each stack frame is private to the corresponding thread, and other threads cannot access it
