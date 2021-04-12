@@ -23,7 +23,6 @@ public class ThreadIntro3 {
         thr2.start();
         thr2.join();
 
-        System.out.println("Thanks for using our software");
-        
+        System.out.println("Thanks for reading the message");
     }
 }
