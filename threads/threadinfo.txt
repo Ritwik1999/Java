@@ -45,6 +45,8 @@ Issues with threads
 To solve this issue, certain functions can be declared with the synchronized keyword, which locks the (data) object from use by other threads
 till the current thread is not done.
 
+A particular object can be locked by a (synchronized) method by only one thread at a time 
+
 With synchronized keyword, the method locks the object, alters it, and releases the lock
 
 Thread.sleep(int milli) is a method that causes the current thread to sleep (pause)
