@@ -1,6 +1,6 @@
 package threads;
 
-public class threadWaitNotify {
+public class ThreadWaitNotify {
     public static void main(String[] args) throws InterruptedException {
         Account1 ac = new Account1(2000);
 
@@ -53,7 +53,7 @@ class Account1 {
         System.out.println("This is deposit " + Thread.currentThread().getId());
         this.balance += depositAmount;
         System.out.println("Notifying " + Thread.currentThread().getId());
-        // notify again releases the lock
+        // notify again releases the lock, and can notify one and only one thread at a time
         notify();
     }
 }
