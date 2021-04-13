@@ -59,3 +59,20 @@ Static synchronized block:
     > If one thread is executing a static synchronized method, all other threads
     trying to execute any static synchronized methods will be blocked
     > Non-static synchronized methods can run in synchronization with a static synchronized method (i.e., in parallel)
+
+wait method
+    > Causes the current thread to wait until another thread invokes this method in "the same context (i.e., for the same object)".
+    > wait is a method from the Object class and not the Thread class
+    > wait method is always used inside a synchronized method/block
+    > wait will make the thread release the locks and wait for another thread to wake it up
+
+notify method
+    > wakes up a single thread that is waiting on the object's monitor (i.e., any thread that is in wait state for the same object)
+    > notify is a method from the Object class and not the Thread class
+    > If any threads are waiting on this object, one of the is chosen to be awakened. The choice is arbitrary
+    and occurs at the discretion of the implementation
+
+notifyAll method
+    > wakes up all threads that are waiting on the object's monitor
+    > Random thread is then allowed to perform it's action
+    > notifyAll is a method from the Object class and not from the Thread class
