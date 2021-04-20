@@ -1,16 +1,14 @@
 package threads;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class ThreadIntro {
     public static void main(String[] args) {
         processfile1 file1 = new processfile1("ritwik thread 1");
         processfile2 file2 = new processfile2("ritwik thread 2");
 
-        // NOTE: From the line below, three threads run in parallel, main, file1 thread and file2 thread. Hence, sysout outputs will be interleaved
+        // NOTE: From the line below, three threads run in parallel, main, file1 thread
+        // and file2 thread. Hence, sysout outputs will be interleaved
         file1.start();
         file2.start();
 

@@ -47,7 +47,7 @@ class Account {
         synchronized (this) {
             System.out.println("Withdrawal in progress");
             // This causes the current thread to sleep (pause) for 5 seconds
-            Thread.sleep(5000);
+            Thread.sleep(5000); // throws InterruptedException
             this.balance -= withdrawAmount;
         }
 

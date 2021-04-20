@@ -37,7 +37,7 @@ Thread Join (code in ThreadIntro3.java)
         > A thread to print world
         > Finally print the message "Thanks for using our software"
 
-Issues with threads (Remember, issues happen when only one object is to be used by both threads)
+Issues with threads (Remember, issues happen when only one object is to be used by more than one thread)
     > Thread Interference - happens when two operations, running in different threads, but acting on the same
     data, interleave
     > Memory consistency errors occur when different threads have inconsistent views of what should be the same data

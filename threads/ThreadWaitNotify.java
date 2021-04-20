@@ -42,8 +42,7 @@ class Account1 {
         System.out.println("This is withdrawal " + Thread.currentThread().getId());
         while (withdrawAmount > balance) {
             System.out.println("Thread is waiting " + Thread.currentThread().getId());
-            // wait releases the lock
-            wait();
+            wait(); // throws InterruptedException
         }
         System.out.println("Withdrawal in progress " + Thread.currentThread().getId());
         this.balance -= withdrawAmount;
@@ -53,7 +52,6 @@ class Account1 {
         System.out.println("This is deposit " + Thread.currentThread().getId());
         this.balance += depositAmount;
         System.out.println("Notifying " + Thread.currentThread().getId());
-        // notify again releases the lock, and can notify one and only one thread at a time
         notify();
     }
 }

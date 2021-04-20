@@ -19,7 +19,7 @@ public class ThreadIntro3 {
 
         // Try commenting lines 22 and/or 24 to see what does Thread.join() do
         thr1.start();
-        thr1.join();
+        thr1.join();    // throws InterruptedException
         thr2.start();
         thr2.join();
 

@@ -30,7 +30,7 @@ public class ThreadWaitNotifyAll {
 
             @Override
             public void run() {
-                ac.deposit(40000);     
+                ac.deposit(40000);
             }
         });
 
@@ -67,8 +67,6 @@ class Account2 {
         System.out.println("This is deposit " + Thread.currentThread().getId());
         this.balance += depositAmount;
         System.out.println("Notifying " + Thread.currentThread().getId());
-        // notify again releases the lock, and can notify one and only one thread at a
-        // time
         notifyAll();
     }
 }
