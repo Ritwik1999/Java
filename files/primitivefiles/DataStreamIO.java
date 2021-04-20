@@ -1,13 +1,18 @@
-// for reading and writing primitive data types
-
-package files;
+/*
+    > The DataOutputStream lets an application write primitive Java data types to an output stream in a portable way
+    > Constructor: DataOutputStream(OutputStream out)
+    > The Application can then use DataInputStream to read the data back in.
+    > The DataInputStream let an application read primitive Java data types from an underlying inut stream in a machine-independent way
+    > Constructor: DataInputStream(InputStream in)
+*/
+package files.primitivefiles;
 
 import java.io.*;
 
 public class DataStreamIO {
-    public static void main(String[] args) throws Throwable {
+    public static void main(String[] args) {
         try {
-            File obj = new File("files/datafile.txt");
+            File obj = new File("files/primitivefiles/datafile.txt");
             FileOutputStream fout = new FileOutputStream(obj);
             DataOutputStream dout = new DataOutputStream(fout);
             dout.writeBoolean(true);
@@ -26,6 +31,8 @@ public class DataStreamIO {
 
             System.out.println(f + " " + k + " " + s);
         } catch (Exception e) {
+            System.out.println("Exception occurred");
+            System.out.println(e.getClass());
             System.out.println(e.getMessage());
         }
     }

@@ -10,8 +10,17 @@ public class OutputStreamWriterWrite {
         iwrite.write(1013); // Epsilon
         iwrite.write(10); // Newline
         iwrite.write(1013);
-        System.out.println("Done");
-
+        iwrite.write(10);
+        iwrite.write(10);
         iwrite.close();
+
+        FileOutputStream fout2 = new FileOutputStream(obj, true);
+        OutputStreamWriter iwrite2 = new OutputStreamWriter(fout2, "UTF-16");
+        iwrite2.write(999);
+        iwrite2.write(10);
+        iwrite2.write(999);
+        iwrite2.close();
+
+        System.out.println("Done");
     }
 }
