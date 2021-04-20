@@ -1,7 +1,7 @@
 package lambdaexps;
 
 public class LambdaExpressions {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // LambdaExpressions with no return type
         emp e = (name, designation) -> {
             System.out.println("Name: " + name + "\nDesignation: " + designation);
@@ -19,10 +19,14 @@ public class LambdaExpressions {
         // LambdaExpressions with threads because Runnable is a functional interface
         Runnable r = () -> {
             System.out.println("I am from thread 1");
+            System.out.println("My ID is: " + Thread.currentThread().getId());
         };
 
         Thread thr1 = new Thread(r);
         thr1.start();
+        thr1.join();
+
+        System.out.println("Done");
     }
 }
 
