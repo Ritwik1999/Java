@@ -8,7 +8,7 @@
         the file named by the pathname name in the file system.
 */
 
-package files.filebytes;
+package files.bytefiles;
 
 import java.io.*;
 

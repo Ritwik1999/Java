@@ -1,4 +1,4 @@
-package files.filebytes;
+package files.bytefiles;
 
 import java.io.*;
 
