@@ -50,7 +50,7 @@ class Student implements Serializable {
 
     String name;
     String regno;
-    transient int k;    // will not be serialized
+    transient int k; // will not be serialized
 
     public Student(String name, String regno) {
         this.name = name;
