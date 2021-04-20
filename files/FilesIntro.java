@@ -16,6 +16,24 @@
     Java has a File Class
 */
 
+/*
+    Streams are sequence of bytes, we read them from various sources, and can also write them to various sources
+
+    How to read data? (FileInputStream)
+    > We can read data as 8 bit bytes
+    e.g., 00000011 00001111
+
+    > We can read data as characters (sequence of bytes encoded as a symbol) (FileReader)
+    i.e., as ANSI (ASCII + 128 more entities; 8 bit encoding; used by Windows), or ASCII(7 bit encoding), or Unicode(UTF-8, 8 bits or UTF-16, 16 bits) characters
+    e.g., h is encoded in ASCII as 104
+
+    > As primitive data types (Scanner)
+    int, boolean, char, String, float, double
+
+    > We can read objects (ObjectInputStream)
+    Deserialization of objects
+*/
+
 package files;
 
 import java.io.File;

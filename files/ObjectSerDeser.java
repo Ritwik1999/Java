@@ -31,7 +31,7 @@ public class ObjectSerDeser {
             objout.writeObject(s);
             objout.close();
 
-            // Read the oject s from the file
+            // Read the object s from the file
             ObjectInputStream objin = new ObjectInputStream(new FileInputStream(obj));
             Student s1 = null;
             s1 = (Student) objin.readObject();

@@ -1,19 +1,26 @@
 /*
-    FileReader class methods
+    FileReader (extends InputStreamReader, which in turn extends the Reader class) is a convenience class for reading character files.
+    FileReader is meant for reading streams of characters
+    It assumes the default encoding to be appropriate (Windows follows ANSI)
+    For reading streams of raw bytes, consider using a FileInputStream
 
+    Constructors
+    > FileReader (File file)
+    > FileReader (String fileName)
+
+    FileReader class methods
     > public int read() throws IOException - reads a single character
     > public int read(char buf[]) throws IOException - reads characters into an array
     > public int read(char cbuf[], int offset, int length) throws IOException - reads characters into a portion of an array
     > public void close() throws IOException - closes the stream and releases any system resource associated with it
 */
 
-package files;
+package files.charfiles;
 
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 
 public class FileReaderRead {
-    public static void main(String[] args) throws Throwable {
+    public static void main(String[] args) {
         try {
             // Use FileReader for reading text files
             File obj = new File("files/test.txt");
@@ -39,6 +46,8 @@ public class FileReaderRead {
             }
             fir.close();
         } catch (Exception e) {
+            System.out.println("Exception occurred");
+            System.out.println(e.getClass());
             System.out.println(e.getMessage());
         }
     }
