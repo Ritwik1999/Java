@@ -17,7 +17,8 @@ public class ExceptionsIntro {
                 throw new Number15Exception("15 not allowed");
             }
         }
-        // In case when multiple catch blocks qualify to handle a single type of exception, it is the first catch block that catches
+        // In case when multiple catch blocks qualify to handle a single type of
+        // exception, it is the first catch block that catches
         // A base class exception can handle all child class exceptions
         catch (Exception e) {
             if (e instanceof Number13Exception) {

@@ -9,10 +9,10 @@ package exception;
 import java.sql.SQLException;
 
 public class ExceptionChaining {
-    public static void main(String[] args) throws Throwable {
+    public static void main(String[] args) {
         try {
             throw new ArithmeticException("divide by zero").initCause(new SQLException("Couldn't fetch data"));
-        } catch (ArithmeticException e) {
+        } catch (Throwable e) {
             System.out.println(e.getMessage());
             System.out.println(e.getCause());
         }

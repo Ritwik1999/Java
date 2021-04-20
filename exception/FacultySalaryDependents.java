@@ -6,7 +6,7 @@ public class FacultySalaryDependents {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         try {
-            Faculty f1 = new Faculty("123", "Professor", "Harley", "667", "31-10-1940");     // Line (*)
+            Faculty f1 = new Faculty("123", "Professor", "Harley", "667", "31-10-1940"); // Line (*)
             Faculty f2 = new Faculty("456", "Associate Professor", "Sheldon", "9823758374", "23-02-1945");
             Faculty f3 = new Faculty("789", "Assistant Professor", "Leonard", "9784781723", "19-09-1950");
             Faculty f4 = new Faculty("101", "TRA", "", "", "");

@@ -1,8 +1,7 @@
 package exception;
 
 import java.lang.Math;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 abstract class Shape {
     abstract void compute_area() throws ArithmeticException;

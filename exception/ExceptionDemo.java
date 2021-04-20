@@ -1,6 +1,6 @@
 package exception;
 
-public class Test {
+public class ExceptionDemo {
     public static void f1() throws Exception {
         throw new Exception("Exception is thrown");
     }

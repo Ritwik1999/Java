@@ -8,7 +8,7 @@ public class StudentException {
     String regno;
     String phone;
 
-    void getInfo(Scanner input) {    
+    void getInfo(Scanner input) {
         System.out.println("Enter name, regno, and phone number:");
 
         name = input.nextLine();
@@ -50,7 +50,7 @@ public class StudentException {
 
             System.out.println();
             for (int i = 0; i < students.length; i++) {
-                // students[i] = new StudentException();   // Line (*)
+                students[i] = new StudentException(); // Line (*)
                 students[i].getInfo(input);
             }
 

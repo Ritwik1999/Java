@@ -2,14 +2,6 @@ package exception;
 
 import java.util.Scanner;
 
-class UserPassException extends Exception {
-    private static final long serialVersionUID = 1L;
-    
-    UserPassException(String s) {
-        super(s);
-    }
-}
-
 public class UserPass {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -28,7 +20,7 @@ public class UserPass {
 
             if (username.isEmpty() || password.isEmpty()) {
                 valid = false;
-                throw new UserPassException("Username and password cannot be empty");                
+                throw new UserPassException("Username and password cannot be empty");
             }
 
             if (valid) {
@@ -52,5 +44,13 @@ public class UserPass {
             input.close();
             System.out.println();
         }
+    }
+}
+
+class UserPassException extends Exception {
+    private static final long serialVersionUID = 1L;
+
+    UserPassException(String s) {
+        super(s);
     }
 }

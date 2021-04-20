@@ -1,15 +1,6 @@
 package exception;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
-class InvalidRangeException extends Exception {
-    private static final long serialVersionUID = 1L;
-
-    InvalidRangeException(String s) {
-        super(s);
-    }
-}
+import java.util.*;
 
 public class Marks {
     public static void main(String[] args) throws InputMismatchException, IndexOutOfBoundsException {
@@ -40,6 +31,13 @@ public class Marks {
         } finally {
             input.close();
         }
+    }
+}
 
+class InvalidRangeException extends Exception {
+    private static final long serialVersionUID = 1L;
+
+    InvalidRangeException(String s) {
+        super(s);
     }
 }
