@@ -1,4 +1,4 @@
-package files;
+package files.objectfiles;
 
 import java.util.*;
 import java.io.*;
@@ -12,7 +12,7 @@ public class ObjectArrSerDeser {
         String name;
         String regno;
 
-        File obj = new File("files/objectarrfile.txt");
+        File obj = new File("files/objectfiles/objectarrfile.txt");
         FileOutputStream fout = new FileOutputStream(obj);  // throws FileNotFoundException (FileNotFoundException extends IOException)
         ObjectOutputStream objout = new ObjectOutputStream(fout);   // throws IOException
 

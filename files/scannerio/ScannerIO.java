@@ -1,4 +1,4 @@
-package files;
+package files.scannerio;
 
 import java.io.*;
 import java.util.*;
@@ -6,7 +6,7 @@ import java.util.*;
 public class ScannerIO {
     public static void main(String[] args) throws FileNotFoundException {
         // read data from a file using Scanner
-        File obj = new File("files/scannerfile.txt");
+        File obj = new File("files/scannerio/scannerfile.txt");
         Scanner input = new Scanner(obj); // throws FileNotFoundException
         while (input.hasNextLine()) {
             System.out.println(input.nextLine()); // Prints line by line
