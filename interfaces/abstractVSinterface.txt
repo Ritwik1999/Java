@@ -1,0 +1,13 @@
+Abstract class
+    > Method implementation is provided for common methods, whereas some maybe abstract
+    > Can have variables of any type.
+    > A class cannot extend multiple abstract classes
+    > Constructor is allowed, but it cannot be abstract
+    > Cannot be instantiated
+
+Interface
+    > All methods are abstract
+    > Variables are public (by defualt), static and final
+    > A class can implement multiple interfaces
+    > Interfaces do not have a constructor
+    > Cannot be instantiated
