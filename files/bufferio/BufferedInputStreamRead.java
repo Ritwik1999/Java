@@ -21,10 +21,6 @@ public class BufferedInputStreamRead {
             int data = bufin.read(); // reads one byte from the buffer, i.e. h in hello
             System.out.println((char) data);
 
-            // BufferedOutputStream bufout = new BufferedOutputStream(System.out);
-            // bufout.write(data);
-            // bufout.close();
-
             byte b[] = new byte[4];
             bufin.read(b); // reads 4 bytes from the buffer, e.g., ello in hello
             for (byte c : b) {
@@ -33,7 +29,7 @@ public class BufferedInputStreamRead {
 
             bufin = new BufferedInputStream(System.in);
             data = bufin.read();
-            // Mark after the first byte read, for a maximum
+            // Mark after the first byte read, for a maximum of 3 bytes
             bufin.mark(3);
             byte b1[] = new byte[4];
             bufin.read(b1);
