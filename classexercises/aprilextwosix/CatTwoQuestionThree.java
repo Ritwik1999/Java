@@ -18,7 +18,7 @@ public class CatTwoQuestionThree {
 
         Student students[] = new Student[3];
         for (int i = 0; i < students.length; i++) {
-            System.out.println("Enter details: ");
+            System.out.println("------------------------------------------\nEnter details: ");
             name = input.nextLine();
             regno = input.nextLine();
             email = input.nextLine();
@@ -36,6 +36,7 @@ public class CatTwoQuestionThree {
 
         Object myobj = null;
         int count = 0;
+        System.out.println("------------------------------------------");
         while (true) {
             myobj = objin.readObject();
 

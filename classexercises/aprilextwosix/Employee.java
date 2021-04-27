@@ -78,7 +78,11 @@ public class Employee {
         } catch (InputMismatchException e) {
             System.out.println("Invalid input");
         } catch (Exception e) {
+            System.out.println("--------------------------------");
+            System.out.println("Exception occurred");
+            System.out.println(e.getClass());
             System.out.println(e.getMessage());
+            System.out.println("--------------------------------");
         } finally {
             input.close();
             System.out.println("Thanks for using our Software");

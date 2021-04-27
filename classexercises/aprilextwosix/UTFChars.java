@@ -9,12 +9,13 @@ public class UTFChars {
         int choice;
         int charCode = 1013;
 
-        File obj = new File("sample.txt");
-        FileOutputStream fout = new FileOutputStream(obj);
+        File obj = new File("classexercises/aprilextwosix/sample.txt");
+        FileOutputStream fout = new FileOutputStream(obj, true);
         OutputStreamWriter iwrite = new OutputStreamWriter(fout, "UTF-16");
         FileInputStream fin = new FileInputStream(obj);
         InputStreamReader iread = new InputStreamReader(fin, "UTF-16");
 
+        System.out.println();
         do {
             int option;
             System.out.print("Enter 1 to write a UTF-16 character, or 2 to read all characters: ");
@@ -28,11 +29,9 @@ public class UTFChars {
                 break;
 
             case 2:
-                int temp = charCode;               
-                while (temp >= 1013) {
-                    int data = iread.read();
+                int data;
+                while ((data = iread.read()) != -1) {
                     System.out.println("Code: " + data + "\tCharacter: " + (char) data);
-                    temp--;
                 }
                 break;
 

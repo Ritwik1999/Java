@@ -18,7 +18,7 @@ public class Course {
 
         Course2 courses[] = new Course2[4];
         for (int i = 0; i < courses.length; i++) {
-            System.out.println("Enter details: ");
+            System.out.println("------------------------------------------\nEnter details: ");
             id = input.nextLine();
             name = input.nextLine();
             by = input.nextLine();
@@ -36,6 +36,7 @@ public class Course {
 
         Object myobj = null;
         int count = 0;
+        System.out.println("------------------------------------------");
         while (true) {
             myobj = objin.readObject();
 
@@ -54,7 +55,7 @@ public class Course {
         objin.close();
 
         if (count == 0) {
-            System.out.println("No Such Students Match the Criteria");
+            System.out.println("No Such Courses Match the Criteria");
         }
     }
 }
