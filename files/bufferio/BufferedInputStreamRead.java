@@ -18,24 +18,32 @@ public class BufferedInputStreamRead {
     public static void main(String[] args) {
         try {
             BufferedInputStream bufin = new BufferedInputStream(System.in);
-            int data = bufin.read(); // reads one byte from the buffer, i.e. h in hello
+            System.out.println("\nEnter some text: ");
+            int data = bufin.read(); // reads one byte from the buffer
             System.out.println((char) data);
 
             byte b[] = new byte[4];
-            bufin.read(b); // reads 4 bytes from the buffer, e.g., ello in hello
+            bufin.read(b); // reads 4 bytes from the buffer
             for (byte c : b) {
                 System.out.println((char) c);
             }
-
+            System.out.println("------------------------------------\nEnter some more text: ");
             bufin = new BufferedInputStream(System.in);
             data = bufin.read();
+            System.out.println("Mark set after first byte of entered text, which is: " + (char)data);
             // Mark after the first byte read, for a maximum of 3 bytes
             bufin.mark(3);
             byte b1[] = new byte[4];
             bufin.read(b1);
+            System.out.print("Read 4 more bytes, which were: ");
+            for (int i = 0; i < b1.length; i++) {
+                System.out.print((char)b1[i]);
+            }
             bufin.reset();
+            System.out.println("\nReader reset to mark");
             data = bufin.read();
             System.out.println("Read after reset: " + (char) data);
+            System.out.println("Bytes available to read: " + bufin.available());
 
             bufin.close();
         } catch (Exception e) {

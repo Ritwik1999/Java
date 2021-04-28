@@ -23,7 +23,7 @@ import java.io.*;
 public class ObjectSerDeser {
     public static void main(String[] args) {
         try {
-            Student s = new Student("Ritwik", "18BCE1234");
+            Student s = new Student("Ritwik", "18BCE2166", 21);
 
             // Write the state of the object s to a file
             File obj = new File("files/objectfiles/objectfile.txt");
@@ -48,21 +48,22 @@ public class ObjectSerDeser {
 }
 
 class Student implements Serializable {
-    private static final long serialVersionUID = 1L;
-
     String name;
     String regno;
+    int age;
     transient int k; // will not be serialized
 
-    public Student(String name, String regno) {
+    public Student(String name, String regno, int age) {
         this.name = name;
         this.regno = regno;
+        this.age = age;
         k = 55;
     }
 
     public void display() {
         System.out.println("Student Name: " + name);
         System.out.println("Student Registration Number: " + regno);
+        System.out.println("Student Age: " + age);
         System.out.println(k);
     }
 }

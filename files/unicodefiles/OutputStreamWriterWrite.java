@@ -7,8 +7,8 @@ public class OutputStreamWriterWrite {
         File obj = new File("files/unicodefiles/unicodefilesoutput.txt");
         FileOutputStream fout = new FileOutputStream(obj);
         OutputStreamWriter iwrite = new OutputStreamWriter(fout, "UTF-16");
-        iwrite.write(1013); // Epsilon
-        iwrite.write(10); // Newline
+        iwrite.write(1013); // Write Epsilon
+        iwrite.write(10); // Write Newline
         iwrite.write(1013);
         iwrite.write(10);
         iwrite.write(10);

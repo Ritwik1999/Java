@@ -18,7 +18,7 @@ public class DataStreamIO {
             dout.writeBoolean(true);
             // write an integer to the file - writing 4 bytes of data
             dout.writeInt(13);
-            dout.writeUTF("Ritwik Neema");
+            dout.writeUTF("Ritwik Neema 18BCE2166");
             dout.close();
 
             FileInputStream fin = new FileInputStream(obj);
@@ -29,7 +29,7 @@ public class DataStreamIO {
             String s = din.readUTF();
             din.close();
 
-            System.out.println(f + " " + k + " " + s);
+            System.out.println("\n" + f + " " + k + " " + s);
         } catch (Exception e) {
             System.out.println("Exception occurred");
             System.out.println(e.getClass());
