@@ -1,0 +1,30 @@
+A Collection represents a group of objects (primitive or userdefined), known as elements.
+
+Some Common Methods on any Collection
+    > Add(E e) - Adds an object
+    > remove(Object o) - Removes a specific object
+    > size() - Returns the number of elements in this collection
+    > isEmpty() - Returns true if the collection is empty
+    > contains(object) - Checks if the collection contains a specified element
+    > clear() - Removes all elements from a collection
+
+Defining Sub Collections using Properties
+    Example, 
+        > Duplicate elements are allowed
+        > Order of insertion should be maintained in the collection (using 0-indexing)
+    Such Collections are called "Lists", i.e., LISTS EXTENDS COLLECTIONS, and it uses a dynamic array (which makes it useful when compared to traditional arrays)
+
+    Methods specific for Collections of type Lists
+        > add(int index, E element) - insert an element in a specific position
+        > get(int index) - Return the element at the specified position in the list
+        > set(int index, E element) - Replace an element in the specified position
+        > remove(int index) - Remove an element from the specfied position
+        > indexOf(Object o) - Returns index of an object
+
+    Subtypes of Lists
+        > How we store elements in the lists?
+            * We can store all elements in contiguous memory blocks, such types of lists are classified as ArrayLists (These are read-optimized, but not write-optimized)
+            * Or, we can randomly store elements anywhere, but maintain pointers (references) to other elements, such type of lists are called LinkedLists (these are write optimized)
+            NOTE: In Java, the LinkedLists uses a doubly LL internally
+            We can use LinkedList class to create a List, Stack, and Queue(Doubly-ended)
+            Apart from similar methods from ArrayList, LinkedList also has methods like push and pop
