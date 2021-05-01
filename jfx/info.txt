@@ -1,0 +1,41 @@
+JavaFX is a set of graphics and media packages that enables developers to design, create, test, debug, and deploy rich client applications that operate consistently across diverse platforms
+
+ With JavaFX, you can build many types of applications
+
+ Typically, they are network-aware applications that are deployed across multiple platforms and display information in a high-performance modern user interface that features audio, video, graphics, and animation.
+
+ Every JavaFX application must 
+    > import javafx.application.Application class
+    > inherit Application class in your class
+    > Override the start method of Application class
+
+To launch the application, call the launch method from within a method like main. (launch method shouldn't be called more than once, else exception will be thrown)
+
+One needs to understand some terms in order to build javafx applications
+   > Control: Objects of interaction between the user and the app. For example, buttons, text fields, etc
+   > Layout: Organization of various control objects within an app
+   > Scene: Layouts are added to a scene (A scene can have many layouts)
+   > Stage: Scenes are added to a stage (A stage can have several scenes)
+   > Events: Specific interactions between the user and the control objects that trigger certain events which are dispatched to their corresponding handlers
+
+Layout containers or panes can be used for flexible and dynamic arrangements of the UI controls within a scene graph of a JavaFX application. The JavaFX Layout API includes the following container classes that automate common layout models:
+
+   > The "HBox" class arranges its content nodes horizontally in a single row
+   > The "VBox" class arranges its content nodes vertically in a single column
+   > The "StackPane" class places its content nodes in a back-to-front single stack
+   > The "FlowPane" class arranges its content nodes in either a horizontal or vertical "flow", wrapping at the specified width (for horizontal) or height (for vertical) boundaries
+   > The "GridPane" class enables the developer to create a flexible grid of rows and columns in which to lay out content nodes
+   > The "BorderPane" class lays out its content nodes in the top, bottom, right, left, or center region
+
+Stage methods
+   Stage.show();
+   Stage.setScene(sc);
+   Stage.setTitle(value);
+   Stage.getTitle();
+   Stage.setWidth(value);
+   Stage.setHeight(value);
+   Stage.getWidth();
+   Stage.getHeight();
+   Stage.setFullScreen(true);
+   Stage.isFullScreen();
+   Stage.close();
