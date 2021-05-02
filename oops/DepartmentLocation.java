@@ -3,8 +3,9 @@ package oops;
 import java.util.Scanner;
 
 public class DepartmentLocation {
+    private static final Scanner input = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
         int n, m, i, k, j = 0;
 
         System.out.println("\nEnter count of department instances: ");
@@ -52,6 +53,8 @@ public class DepartmentLocation {
         if (!found) {
             System.out.println("No such department name found");
         }
+
+        input.close();
     }
 }
 
