@@ -39,3 +39,16 @@ Stage methods
    Stage.setFullScreen(true);
    Stage.isFullScreen();
    Stage.close();
+
+JavaFX UI controls
+   > Label: is a non-editable text control. A Label is useful for displaying text that is required to fit within a specific space
+      Constructors: Label() - creates an empty Label; Label(String text) - creates label with supplied text
+   > Button
+   > Radio Button
+   > Check Box
+   > Combo Box
+   > List View
+   > Text Field
+   > Password Field
+   > Menu
+   > Table
