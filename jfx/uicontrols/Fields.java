@@ -20,9 +20,12 @@ public class Fields extends Application {
         PasswordField password = new PasswordField();
         password.setMaxWidth(300);
 
+        // Add fields to layout
         VBox root = new VBox();
         root.getChildren().addAll(text, password);
+        // Add layout to scene
         Scene sc = new Scene(root);
+        // Add scene to stage
         primaryStage.setHeight(500);
         primaryStage.setWidth(500);
         primaryStage.setScene(sc);

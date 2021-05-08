@@ -22,8 +22,11 @@ public class ListViews extends Application {
         subjects.getItems().add("Maths");
         subjects.getItems().add("Chemistry");
 
+        // Add ListView to layout
         HBox root = new HBox(subjects);
+        // Add layout to scene
         Scene sc = new Scene(root);
+        // Add scene to stage
         primaryStage.setHeight(500);
         primaryStage.setWidth(500);
         primaryStage.setScene(sc);

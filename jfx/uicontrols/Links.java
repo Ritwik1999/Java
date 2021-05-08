@@ -16,7 +16,7 @@ public class Links extends Application {
     public void start(Stage primaryStage) throws Exception {
         // Creating hyperlinks
         Hyperlink mygithub = new Hyperlink("https://github.com/Ritwik1999");
-        // create a layout
+        // add link to layout
         VBox root = new VBox(mygithub);
         // add layout to scene
         Scene sc = new Scene(root);

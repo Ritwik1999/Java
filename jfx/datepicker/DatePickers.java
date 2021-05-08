@@ -1,12 +1,13 @@
-package jfx.uicontrols;
+package jfx.datepicker;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-public class ComboBoxes extends Application {
+public class DatePickers extends Application {
     public static void main(String[] args) {
         System.out.println("Launching the app...");
         launch();
@@ -14,17 +15,13 @@ public class ComboBoxes extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        ComboBox<String> subjects = new ComboBox<>();
-        subjects.getItems().add("Computer Science");
-        subjects.getItems().add("Physics");
-        subjects.getItems().add("Chemistry");
-        subjects.getItems().add("Maths");
+        Label lbl = new Label("Select your date of birth");
+        DatePicker d = new DatePicker();
 
-        // Add Combo Box to layout
-        HBox root = new HBox(subjects);
-        // Add layout to scene
+        HBox root = new HBox();
+        root.getChildren().addAll(lbl, d);
         Scene sc = new Scene(root);
-        // Add Scene to stage
+        primaryStage.setTitle("My datepicker");
         primaryStage.setHeight(500);
         primaryStage.setWidth(500);
         primaryStage.setScene(sc);
