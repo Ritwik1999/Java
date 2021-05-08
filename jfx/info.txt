@@ -6,7 +6,7 @@ JavaFX is a set of graphics and media packages that enables developers to design
 
  Every JavaFX application must 
     > import javafx.application.Application class
-    > inherit Application class in your class
+    > inherit Application class
     > Override the start method of Application class
 
 To launch the application, call the launch method from within a method like main. (launch method shouldn't be called more than once, else exception will be thrown)

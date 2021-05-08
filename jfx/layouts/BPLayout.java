@@ -1,4 +1,4 @@
-package jfx;
+package jfx.layouts;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
