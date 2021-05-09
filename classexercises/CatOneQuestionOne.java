@@ -1,6 +1,6 @@
-package demo;
+package classexercises;
 
-public class javalabclass {
+public class CatOneQuestionOne {
     public static void main(String[] args) {
         System.out.println();
         professor satish = new professor("ritwik", "vellore", "c19", "s003");

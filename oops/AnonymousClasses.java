@@ -1,6 +1,6 @@
 package oops;
 
-public class AnonClasses {
+public class AnonymousClasses {
     public static void main(String[] args) {
         // The line below does not create an object of type employee (as abstract
         // classes cannot be instantiated), rather creates an object of an anonymous
