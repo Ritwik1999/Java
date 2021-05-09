@@ -28,6 +28,7 @@ public class ComboBoxes extends Application {
         primaryStage.setHeight(500);
         primaryStage.setWidth(500);
         primaryStage.setScene(sc);
+        primaryStage.setTitle("My app");
         primaryStage.show();
     }
 }
