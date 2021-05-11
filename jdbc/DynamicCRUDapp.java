@@ -21,7 +21,7 @@ public class DynamicCRUDapp {
                 switch (choice) {
                     case 1:
                         s.getStudentDetails();
-                        s.insertStudent();
+                        s.insertStudentRecord();
                         break;
                     case 2:
                         s.updateStudentPassword();
@@ -64,7 +64,7 @@ class Student {
         marks = Integer.parseInt(input.nextLine());
     }
 
-    public void insertStudent() throws InstantiationException, IllegalAccessException, IllegalArgumentException,
+    public void insertStudentRecord() throws InstantiationException, IllegalAccessException, IllegalArgumentException,
             InvocationTargetException, NoSuchMethodException, SecurityException, ClassNotFoundException, SQLException {
 
         DBMSConnection dbmsconnect = new DBMSConnection("jdbc:mysql://localhost:3306/vit", "root", "");
