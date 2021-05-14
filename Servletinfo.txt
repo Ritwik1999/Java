@@ -1,0 +1,29 @@
+Servlet
+> Java Servlet technology provides dynamic, user-oriented content in web applications using a request-response programming model
+> Although servlets can respond to any type of request, they are commonly used to extend the applications hosted by web servers
+> For such applications, Java servlets technology defines the HTTP-specific servlet classes
+> Servlets run in a web container on a web server.
+> The web container provides Java runtime services to the Servlet
+
+Class Hierarchy
+User defined classes extend the HttpServlet class
+HttpServlet class extends the GenericServlet class
+GenericServlet class implements the Servlet, ServletConfig, Serializable
+
+> The javax.servlet and javax.servlet.http packages provide interfaces and classes for writing servlets
+> All servlets must implement the Servlet interface, which defines lifecycle methods. When implementing a generic service, you can use or extend the GenericServlet class provided with the Java Servlet API.
+> The HttpServlet class provides methods, such as doGet, and doPost, for handling HTTP-specific services.
+
+Servlet Life Cycle
+> The lifecycle of a servlet is controlled by the container in which the servlet has been deployed. When a request is mapped to a servlet, the container performs the following steps
+> If an instance of the servlet does not exist, the web container:
+    - Loads the servlet class
+    - Creates an instance of the servlet class
+    - Initializes the servlet instance by calling the init method
+    - The container invokes the service method, passing request and response objects.
+> If it needs to remove the servlet, the container finalizes the servlet by invoking the servlet's destroy method
+
+Static vs Dynamic Website
+    > Static Website is coded only using HTML and CSS
+    > Dynamic Website generates content for the user by getting inputs
+    > Dynamic website displays different content and provides user interaction by making use of advanced programming and databases

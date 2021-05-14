@@ -1,0 +1,60 @@
+> JSP is a server side technology
+
+> It is used to create dynamic web content
+
+> Java Server Pages are HTML pages embedded with snippets of Java code.
+
+> It is an extension of the Servlet technology
+
+> Java code can be inserted in HTML and/or XML pages
+
+> JSP is first conerted into servlet by the JSP container before processing the client's request
+
+Advantages:
+    Easier coding, faster development than servlets (no need to recompile and redeploy), easier connection to database, maintain interactive websites, portable, powerful, and flexible
+
+JSP Lifecycle:
+    JSP --- JSP Translator -> Servlet (.java file) --- compiler -> class file --- JRE --- Servlet object -> Buffer (dynamic content)
+
+    > Translation of JSP page
+    > Compilation of JSP page
+    > Classloading (the classloader loads class file)
+    > Instatiation (Object of the generated servlet is created)
+    > Initialization (the container invokes jspInit method)
+    > Request processing (the container invokes jspService method)
+    > Destory (the container invokes the jspDestroy method)
+
+Scripting elements:
+    1. Declarations: Used to define methods and instance variables. They do not produce any output that is sent to the client
+    Embedded in <%! and %> delimiters
+    Example:
+        <%!
+            public void jspDestroy() {
+                System.out.println("JSP Destroy method");
+            }
+
+            public void jspInit() {
+                System.out.println("JSP loaded");
+            }
+            int myVar = 123;
+        %>
+    
+    2. Scriplets: Used to embed java code in jsp
+        > Contents of JSP go into _JSPpageservice() method. Code should comply with syntactical and semantic constructs of Java
+        > Embedded in <% and %> delimiters.
+        Example:
+            <%
+                int x = 5;
+                int y = 7;
+                int z = x + y;
+            %>
+    
+    3. Expressions: Used to write dynamic content back to the browser
+    > If the output of expression is java primitive the value is printed back to the browser
+    > If the output is an object then the result of calling toString on the object is output to the browser
+    > Embedded in <%= and %> delimiters
+    Example:
+        <%="Fred" + " " + "Flintstone" %>
+        prints "Fred Flintstone" (without quotes) on the browser
+        <%=Math.sqrt(100)%>
+        prints 10 on the browser
