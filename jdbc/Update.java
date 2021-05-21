@@ -21,8 +21,8 @@ public class Update {
             int rowsAffected;
 
             // updating a record
-            rowsAffected = stmt.executeUpdate("update student set password='testpass',country='India' where name='Test';");
-            System.out.println(rowsAffected + " record(s) updated");
+            rowsAffected = stmt.executeUpdate("update student set password='newpass',country='NZ' where name='Ritwik Neema';");
+            System.out.println(rowsAffected + " record updated");
 
             stmt.close();
             conn.close();

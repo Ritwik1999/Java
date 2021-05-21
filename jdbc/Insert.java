@@ -21,8 +21,8 @@ public class Insert {
             int rowsAffected;
 
             // inserting a record
-            rowsAffected = stmt.executeUpdate("insert into student values ('Test','jdbctest','NZ',95);");
-            System.out.println(rowsAffected + " record(s) inserted");
+            rowsAffected = stmt.executeUpdate("insert into student values ('Ritwik Neema','18BCE2166','India',95);");
+            System.out.println(rowsAffected + " record inserted");
 
             stmt.close();
             conn.close();

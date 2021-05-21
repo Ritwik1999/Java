@@ -21,8 +21,8 @@ public class Delete {
             int rowsAffected;
 
             // deleting a record
-            rowsAffected = stmt.executeUpdate("delete from student where name='Test';");
-            System.out.println(rowsAffected + " record(s) deleted");
+            rowsAffected = stmt.executeUpdate("delete from student where name='Ritwik Neema';");
+            System.out.println(rowsAffected + " record deleted");
 
             stmt.close();
             conn.close();

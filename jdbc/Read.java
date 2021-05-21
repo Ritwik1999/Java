@@ -33,14 +33,15 @@ public class Read {
                 System.out.println("No matching records found");
             } else {
                 rs.previous();
-                System.out.println("------------------------------------------");
+                System.out.println("Table records");
+                System.out.println("------------------------------------------------------------------------------");
                 while (rs.next()) {
-                    System.out.print(rs.getString(1) + "\t"); // 1 represents first column, and since it has data of type String, we use getString
-                    System.out.print(rs.getString(2) + "\t");
-                    System.out.print(rs.getString(3) + "\t");
-                    System.out.print(rs.getInt(4) + "\n");
+                    System.out.printf("%20s\t", rs.getString(1));
+                    System.out.printf("%20s\t", rs.getString(2));
+                    System.out.printf("%20s\t", rs.getString(3));
+                    System.out.printf("%20d\n", rs.getInt(4));
                 }
-                System.out.println("------------------------------------------");
+                System.out.println("------------------------------------------------------------------------------");
             }
 
             stmt.close();
