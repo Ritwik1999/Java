@@ -26,7 +26,7 @@ public class EmployeeAddress {
             e1.new Address(street, city, district, state, country, zipCode).display_address_details();
         }
 
-        input.close();    
+        input.close();
     }
 }
 

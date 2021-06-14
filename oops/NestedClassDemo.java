@@ -23,10 +23,10 @@ class outer {
         var3 = "test3";
     }
 
-    // this is a nested class
     public class nested {
 
-        //Since nested class is associated with an object of outer class, nested (non-static) classes cannot have static members
+        // Since nested class is associated with an object of outer class, nested
+        // (non-static) classes cannot have static members
         // A non-static nested class is also known as inner class
         public String nestedvar;
 
@@ -35,7 +35,7 @@ class outer {
         }
 
         public void display() {
-            System.out.println(var1 + var2 + var3 + " " + count);
+            System.out.println(var1 + var2 + var3 + nestedvar + " " + count);
         }
     }
 

@@ -24,7 +24,7 @@ public class FacultyDegree {
             f1.new Degree(dname, dyear, duni).display_degree_details();
         }
 
-        input.close();    
+        input.close();
     }
 }
 

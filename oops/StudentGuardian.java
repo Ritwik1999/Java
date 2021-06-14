@@ -42,9 +42,9 @@ class Student {
         guardians = new Guardian[n];
 
         for (int i = 0; i < n; i++) {
-            System.out.println("\nEnter name and contact number for guardian " + (i+1) + ":");
+            System.out.println("\nEnter name and contact number for guardian " + (i + 1) + ":");
             String name = input.nextLine();
-            String phone = input.nextLine();            
+            String phone = input.nextLine();
             guardians[i] = new Guardian(name, phone);
         }
     }
@@ -53,7 +53,7 @@ class Student {
         System.out.println("\nStudent name: " + sName + "\nStudent id: " + regNo + "\n");
 
         for (int i = 0; i < guardians.length; i++) {
-            System.out.print("Guardian " + (i+1) + ": ");
+            System.out.print("Guardian " + (i + 1) + ": ");
             guardians[i].displayGuardianDetails();
         }
     }

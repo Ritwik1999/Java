@@ -39,7 +39,7 @@ public class Course {
             }
         }
 
-        Course.display_courseDetails(ue_count, pe_count, pc_count);
+        display_courseDetails(ue_count, pe_count, pc_count);
     }
 
     public static void display_courseDetails(int ue, int pe, int pc) {
@@ -61,7 +61,7 @@ public class Course {
             courses[i].set_courseDetails(input);
         }
 
-        Course.search_courseDetails(courses);
+        search_courseDetails(courses);
         input.close();
     }
 }

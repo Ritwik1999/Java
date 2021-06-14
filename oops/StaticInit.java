@@ -14,7 +14,9 @@ public class StaticInit {
     static boolean flag;
 
     static {
+        System.out.println("In static init block");
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter breadth and height of parallelogram:");
         B = sc.nextInt();
         H = sc.nextInt();
         flag = true;
@@ -26,9 +28,10 @@ public class StaticInit {
     }
 
     public static void main(String[] args) {
+        System.out.println("In main method");
         if (flag) {
             int area = B * H;
-            System.out.print(area);
+            System.out.println("Area of parallelogram = " + area);
         }
     }
 }

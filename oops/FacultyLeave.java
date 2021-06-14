@@ -8,11 +8,11 @@ public class FacultyLeave {
         FacultyTwo faculties[] = new FacultyTwo[3];
 
         System.out.println("\nEnter names and ids for " + faculties.length + " faculties:");
-        
+
         for (int i = 0; i < faculties.length; i++) {
             String name = input.nextLine();
             String id = input.nextLine();
-            
+
             faculties[i] = new FacultyTwo(name, id);
         }
 

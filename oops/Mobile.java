@@ -9,8 +9,7 @@ public class Mobile {
     int price;
     String yearOfManufacture;
 
-    void set_mobileDetails(Scanner input)
-    {
+    void set_mobileDetails(Scanner input) {
         System.out.println("Enter Mobile model, company, price, and year of manufacture:");
 
         model = input.nextLine();
@@ -21,29 +20,23 @@ public class Mobile {
         System.out.println();
     }
 
-    static void sort_mobileDetails(Mobile mobiles[])
-    {
-        for (int i = 0; i < mobiles.length - 1; i++)
-        {
-            for (int j = 0; j < (mobiles.length - 1 - i); j++)
-            {
-                if (mobiles[j].company.compareTo(mobiles[j+1].company) > 0)
-                {
+    static void sort_mobileDetails(Mobile mobiles[]) {
+        for (int i = 0; i < mobiles.length - 1; i++) {
+            for (int j = 0; j < (mobiles.length - 1 - i); j++) {
+                if (mobiles[j].company.compareTo(mobiles[j + 1].company) > 0) {
                     Mobile temp = mobiles[j];
-                    mobiles[j] = mobiles[j+1];
-                    mobiles[j+1] = temp;
+                    mobiles[j] = mobiles[j + 1];
+                    mobiles[j + 1] = temp;
                 }
             }
         }
 
-        for (int i = 0; i < mobiles.length; i++)
-        {
+        for (int i = 0; i < mobiles.length; i++) {
             mobiles[i].display_mobileDetails();
         }
     }
 
-    void display_mobileDetails()
-    {
+    void display_mobileDetails() {
         System.out.println("----------");
         System.out.println("Model: " + model);
         System.out.println("Company: " + company);
@@ -56,12 +49,11 @@ public class Mobile {
         Mobile mobiles[] = new Mobile[5];
 
         System.out.println();
-        for (int i = 0; i < mobiles.length; i++)
-        {
+        for (int i = 0; i < mobiles.length; i++) {
             mobiles[i] = new Mobile();
             mobiles[i].set_mobileDetails(new Scanner(System.in));
         }
 
         Mobile.sort_mobileDetails(mobiles);
-    }    
+    }
 }

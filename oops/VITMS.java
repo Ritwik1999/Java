@@ -185,9 +185,9 @@ public class VITMS {
         new VITStudent("Ritwik Neema", "18BCE2166").display();
         new VITFaculty("XYZ", "12345").display();
         new Hostel("Dr. Sarvepalli Radharkrishnan Block", 'K', 900, 'M').display();
-        new Building("Silver Jubilee Tower", new String[] {"SCOPE", "SITE"}).display();
-        new Mess("Darling", new String[] {"M", "N", "P"}, true).display();
-        new GPA(new double[] {9.23, 8.9, 8.5, 9.44, 8.87}).display();
+        new Building("Silver Jubilee Tower", new String[] { "SCOPE", "SITE" }).display();
+        new Mess("Darling", new String[] { "M", "N", "P" }, true).display();
+        new GPA(new double[] { 9.23, 8.9, 8.5, 9.44, 8.87 }).display();
         new PAT(855, 650000).display();
         new SoftSkills("SMART", "contact@smart.com").display();
         new VITCourse("Java Programming", "CSE1007", "SCOPE").display();
