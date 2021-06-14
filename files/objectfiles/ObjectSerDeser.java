@@ -13,7 +13,7 @@
 
     > Transient variables - A transient variable is a variable that can not be serialized.
 
-    > Static and final members have no effect even if they are declared transient
+    > Static and final members are not serialized (and thus have no effect even if they are declared transient)
 */
 
 package files.objectfiles;
@@ -23,7 +23,7 @@ import java.io.*;
 public class ObjectSerDeser {
     public static void main(String[] args) {
         try {
-            Student s = new Student("Ritwik", "18BCE2166", 21);
+            Student s = new Student("Ritwik Neema", "18BCE2166", 21);
 
             // Write the state of the object s to a file
             File obj = new File("files/objectfiles/objectfile.txt");

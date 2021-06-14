@@ -39,7 +39,7 @@ public class FileReaderRead {
 
             fir = new FileReader(obj);
             char c1[] = new char[4];
-            fir.read(c1, 1, 2); // Reads h, e in the array c1 from index 1, for length 2
+            fir.read(c1, 1, 2); // Reads h, e into the array c1 from index 1, for length 2
 
             for (char k : c1) {
                 System.out.println(k);

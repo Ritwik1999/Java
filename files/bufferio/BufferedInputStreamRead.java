@@ -30,14 +30,14 @@ public class BufferedInputStreamRead {
             System.out.println("------------------------------------\nEnter some more text: ");
             bufin = new BufferedInputStream(System.in);
             data = bufin.read();
-            System.out.println("Mark set after first byte of entered text, which is: " + (char)data);
+            System.out.println("Mark set after first byte of entered text, which is: " + (char) data);
             // Mark after the first byte read, for a maximum of 3 bytes
             bufin.mark(3);
             byte b1[] = new byte[4];
             bufin.read(b1);
             System.out.print("Read 4 more bytes, which were: ");
             for (int i = 0; i < b1.length; i++) {
-                System.out.print((char)b1[i]);
+                System.out.print((char) b1[i]);
             }
             bufin.reset();
             System.out.println("\nReader reset to mark");

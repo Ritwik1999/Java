@@ -2,7 +2,7 @@ package files.bufferio;
 
 import java.io.*;
 
-public class BufferedReadRead {
+public class BufferedReaderIO {
     public static void main(String[] args) {
         try {
             BufferedReader bufread = new BufferedReader(new InputStreamReader(System.in));
@@ -12,7 +12,7 @@ public class BufferedReadRead {
 
             BufferedWriter bufwrite = new BufferedWriter(new OutputStreamWriter(System.out));
             bufwrite.write(data);
-            System.out.println((char) data);
+            System.out.println(data);
         } catch (Exception e) {
             System.out.println("Exception occurred");
             System.out.println(e.getClass());
