@@ -1,5 +1,5 @@
 Abstract class
-    > Method implementation is provided for common methods, whereas some maybe abstract
+    > Method implementation might be provided for some methods, whereas some other methods might be abstract
     > Can have variables of any type.
     > A class cannot extend multiple abstract classes
     > Constructor is allowed, but it cannot be abstract

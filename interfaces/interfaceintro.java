@@ -9,7 +9,6 @@
 
     If a class implements an interface, this class has a realization relationship to the interface
 
-    // todo: final keyword explanation
 */
 
 package interfaces;
@@ -20,7 +19,11 @@ public class interfaceintro {
         CancellationButton cb = new CancellationButton();
 
         rb.onClick();
+        rb.display();
+
         cb.onClick();
+        cb.display();
+
     }
 }
 
@@ -31,11 +34,19 @@ interface Button {
 
     void onClick();
 
-    // Say the method below is defined after deploying the system.
-    // The problem is that now all classes that implement this interface have to be
-    // changed
-    // Solution: Use default keyword to be able to define a method body
-    // It is not mandatory to override a default method, but it can be done
+    /*
+     * In a typical design based on abstractions, where an interface has one or
+     * multiple implementations, if one or more methods are added to the interface,
+     * all the implementations will be forced to implement them too. Otherwise, the
+     * design will just break down.
+     * 
+     * Default interface methods are an efficient way to deal with this issue. They
+     * allow us to add new methods to an interface that are automatically available
+     * in the implementations. Thus, there's no need to modify the implementing
+     * classes.
+     * 
+     * It is not mandatory to override a default method, but it can be done
+     */
     default void testmethod() {
         System.out.println("This is from test method");
     }
@@ -72,12 +83,21 @@ class ReserveButton implements TwoDButton, ThreeDButton {
 
     @Override
     public void location(int x, int y) {
-
+        System.out.println("2D Location: (" + x + ", " + y + ")");
     }
 
     @Override
     public void location(int x, int y, int z) {
+        System.out.println("3D Location: (" + x + ", " + y + ", " + z + ")");
+    }
 
+    public void display() {
+        setButtonColor();
+        setButtonText();
+        System.out.println("Button Color: " + color);
+        System.out.println("Button Text: " + text);
+        location(23, 34);
+        location(1, 2, 3);
     }
 }
 
@@ -104,11 +124,20 @@ class CancellationButton implements TwoDButton, ThreeDButton {
 
     @Override
     public void location(int x, int y) {
-
+        System.out.println("2D Location: (" + x + ", " + y + ")");
     }
 
     @Override
     public void location(int x, int y, int z) {
+        System.out.println("3D Location: (" + x + ", " + y + ", " + z + ")");
+    }
 
+    public void display() {
+        setButtonColor();
+        setButtonText();
+        System.out.println("Button Color: " + color);
+        System.out.println("Button Text: " + text);
+        location(123, 134);
+        location(221, 222, 223);
     }
 }
