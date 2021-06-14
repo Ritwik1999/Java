@@ -23,14 +23,12 @@ public class LoginServlet extends HttpServlet {
      */
     public LoginServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     /**
      * @see Servlet#init(ServletConfig)
      */
     public void init(ServletConfig config) throws ServletException {
-        // TODO Auto-generated method stub
     }
 
     /**
@@ -54,7 +52,6 @@ public class LoginServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // TODO Auto-generated method stub
         response.getWriter().append("Served at: ").append(request.getContextPath());
     }
 
@@ -121,35 +118,5 @@ class Student {
             connect.closeConnection(stmt, conn);
         }
         return found;
-    }
-}
-
-class DBMSConnection {
-    String url;
-    String username;
-    String password;
-
-    public DBMSConnection(String url, String username, String password) {
-        this.url = url;
-        this.username = username;
-        this.password = password;
-    }
-
-    public Connection getConnection() {
-        Connection conn = null;
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            conn = DriverManager.getConnection(url, username, password);
-        } catch (Exception e) {
-            System.out.println("Exception occurred; here");
-            System.out.println(e.getClass());
-            System.out.println(e.getMessage());
-        }
-        return conn;
-    }
-
-    public void closeConnection(Statement stmt, Connection conn) throws SQLException {
-        stmt.close();
-        conn.close();
     }
 }
