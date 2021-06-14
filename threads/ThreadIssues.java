@@ -2,7 +2,7 @@ package threads;
 
 public class ThreadIssues {
     public static void main(String[] args) throws InterruptedException {
-        Account ac = new Account(15000);
+        Account ac = new Account(5000);
 
         Thread thr1 = new Thread(new Runnable() {
             @Override

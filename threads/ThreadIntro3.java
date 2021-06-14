@@ -1,28 +1,31 @@
 package threads;
 
 public class ThreadIntro3 {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         // Instead of creating a separate class that implments Runnable interface, we
         // use anonymous classes
         Thread thr1 = new Thread(new Runnable() {
             public void run() {
-                System.out.print("Hello, ");
+                int p = Thread.currentThread().getPriority();
+                System.out.println("I am from the thread 1; my priority value is: " + p);
             }
         });
+        thr1.start();
+        thr1.setPriority(10);
 
         Thread thr2 = new Thread(new Runnable() {
             @Override
             public void run() {
-                System.out.println(" World");
+                int p = Thread.currentThread().getPriority();
+                System.out.println("I am from thread 2; my priority value is: " + p);
             }
         });
-
-        // Try commenting lines 22 and/or 24 to see what does Thread.join() do
-        thr1.start();
-        thr1.join();    // throws InterruptedException
         thr2.start();
-        thr2.join();
+        thr2.setPriority(1);
 
-        System.out.println("Thanks for reading the message");
+        // Thread.currentThread returns a reference to the currently executing thread
+        int p = Thread.currentThread().getPriority();
+        System.out.println("I am from the main thread; my priority value is: " + p);
+        System.out.println("Main thread name is: " + Thread.currentThread().getName());
     }
 }

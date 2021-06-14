@@ -29,7 +29,7 @@ How Threads get execute by the processor
     thread with highest priority to execute, and can prematurely stop it's execution if a thread
     with higher priority comes in. Starvation is averted by giving a fix time slice to any thread for execution
 
-Thread Join (code in ThreadIntro3.java)
+Thread Join (code in ThreadIntro4.java)
     > Waits for a thread to die
     > The next step in the program won't execute until the thread terminates
     e.g., 
@@ -37,13 +37,13 @@ Thread Join (code in ThreadIntro3.java)
         > A thread to print world
         > Finally print the message "Thanks for using our software"
 
-Issues with threads (Remember, issues happen when only one object is to be used by more than one thread)
+Issues with threads (Remember, these issues happen when only one object is to be used by more than one thread at the same time)
     > Thread Interference - happens when two operations, running in different threads, but acting on the same
     data, interleave
     > Memory consistency errors occur when different threads have inconsistent views of what should be the same data
 
 To solve this issue, certain functions can be declared with the synchronized keyword, which locks the (data) object from use by other threads
-till the current thread is not done.
+until the current thread is not done.
 
 A particular object can be locked by a (synchronized) method by only one thread at a time 
 
@@ -70,7 +70,7 @@ notify method
     > wakes up a single thread that is waiting on the object's monitor (i.e., any thread that is in wait state for the same object)
     > notify is a method from the Object class and not the Thread class
     > If any threads are waiting on this object, one of the is chosen to be awakened. The choice is arbitrary
-    and occurs at the discretion of the implementation
+    and occurs at the discretion of the Thread Scheduler
 
 notifyAll method
     > wakes up all threads that are waiting on the object's monitor
