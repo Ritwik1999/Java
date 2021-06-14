@@ -48,8 +48,6 @@ public class UserPass {
 }
 
 class UserPassException extends Exception {
-    private static final long serialVersionUID = 1L;
-
     UserPassException(String s) {
         super(s);
     }

@@ -107,8 +107,6 @@ class Faculty {
 }
 
 class PhoneFormatException extends Exception {
-    private static final long serialVersionUID = 1L;
-
     PhoneFormatException(String s) {
         super(s);
     }

@@ -14,7 +14,9 @@ public class ExceptionChaining {
             throw new ArithmeticException("divide by zero").initCause(new SQLException("Couldn't fetch data"));
         } catch (Throwable e) {
             System.out.println(e.getMessage());
-            System.out.println(e.getCause());
+            Throwable cause = e.getCause();
+            System.out.println("Caused by: " + cause.getClass());
+            System.out.println("Message: " + cause.getMessage());
         }
     }
 }

@@ -18,7 +18,7 @@ public class ExceptionsIntro {
             }
         }
         // In case when multiple catch blocks qualify to handle a single type of
-        // exception, it is the first catch block that catches
+        // exception, it is the first catch block that catches it
         // A base class exception can handle all child class exceptions
         catch (Exception e) {
             if (e instanceof Number13Exception) {
@@ -35,24 +35,18 @@ public class ExceptionsIntro {
 }
 
 class MyException extends Exception {
-    private static final long serialVersionUID = 1L;
-
     public MyException(String s) {
         super(s);
     }
 }
 
 class Number13Exception extends MyException {
-    private static final long serialVersionUID = 1L;
-
     public Number13Exception(String S) {
         super(S);
     }
 }
 
 class Number15Exception extends MyException {
-    private static final long serialVersionUID = 1L;
-
     public Number15Exception(String S) {
         super(S);
     }

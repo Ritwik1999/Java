@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class PrimeComposite {
     public static void main(String[] args) {
+        System.out.println("Length is: " + args.length);
         main();
     }
 

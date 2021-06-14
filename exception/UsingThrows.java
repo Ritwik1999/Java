@@ -7,10 +7,11 @@ public class UsingThrows {
         // If a nested try doesn't have a catch, it searches in the outer try block, if
         // not found, it terminates the program
         Scanner input = new Scanner(System.in);
-        try {   
+        try {
             try {
-                DivideByZero d = new DivideByZero(input);
-                d.divideNumbers();
+                throw new Exception("Custom message");
+                // DivideByZero d = new DivideByZero(input);
+                // d.divideNumbers();
             } finally {
                 System.out.println("Inner finally executed");
                 DivideByZero d1 = new DivideByZero(input);

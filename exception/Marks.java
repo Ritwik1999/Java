@@ -3,7 +3,7 @@ package exception;
 import java.util.*;
 
 public class Marks {
-    public static void main(String[] args) throws InputMismatchException, IndexOutOfBoundsException {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         try {
             int n;
@@ -35,8 +35,6 @@ public class Marks {
 }
 
 class InvalidRangeException extends Exception {
-    private static final long serialVersionUID = 1L;
-
     InvalidRangeException(String s) {
         super(s);
     }
