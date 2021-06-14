@@ -9,9 +9,11 @@ public class Natural {
         System.out.print("Enter a natural number: ");
         n = sc.nextInt();
 
-        for (int i = 1; i <= n; i++) {
-            sum = sum + i;
-        }
+        // for (int i = 1; i <= n; i++) {
+        // sum = sum + i;
+        // }
+
+        sum = (n * (n + 1)) / 2;
 
         System.out.print("Sum is: ");
         System.out.println(sum);

@@ -9,13 +9,11 @@ public class OddEven {
         System.out.print("Enter a natural number: ");
         n = sc.nextInt();
 
-        if (n % 2 == 0)
-        {
+        if (n % 2 == 0) {
             System.out.println("The number is even");
         }
 
-        else
-        {
+        else {
             System.out.println("The number is odd");
         }
 

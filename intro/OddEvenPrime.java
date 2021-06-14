@@ -22,12 +22,11 @@ public class OddEvenPrime {
                 count_odd += 1;
             }
 
-            if (digit == 2 || digit == 3 || digit == 5 || digit == 7)
-            {
+            if (digit == 2 || digit == 3 || digit == 5 || digit == 7) {
                 count_prime += 1;
             }
 
-            n = n/10;
+            n = n / 10;
         }
 
         System.out.println("The number of even digits is " + count_even);

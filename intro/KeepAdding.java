@@ -22,7 +22,7 @@ public class KeepAdding {
         } while (choice);
 
         System.out.println("Thank you for using this software.");
-        
+
         sc.close();
     }
 }

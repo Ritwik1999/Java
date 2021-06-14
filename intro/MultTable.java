@@ -9,9 +9,8 @@ public class MultTable {
         System.out.print("Enter a natural number: ");
         n = sc.nextInt();
 
-        for (int i = 1; i <= 10; i++)
-        {
-            System.out.println(n + " x " + i + " = " + (n*i));
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(n + " x " + i + " = " + (n * i));
         }
 
         sc.close();

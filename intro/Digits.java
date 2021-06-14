@@ -11,8 +11,7 @@ public class Digits {
 
         System.out.println("Last digit is: " + (n % 10));
 
-        while(n > 10)
-        {
+        while (n > 10) {
             n = n / 10;
         }
 

@@ -9,7 +9,7 @@ public class EqTriangleArea {
         System.out.print("Enter side of triangle: ");
 
         double side = input.nextDouble();
-        double area = (Math.sqrt(3)/4)*side*side;
+        double area = (Math.sqrt(3) / 4) * side * side;
 
         System.out.println("The area is: " + area + " square units");
 
