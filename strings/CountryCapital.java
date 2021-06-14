@@ -10,28 +10,28 @@ public class CountryCapital {
         String country = input.nextLine();
 
         switch (country) {
-        case "India":
-            System.out.println("New Delhi\n");
-            break;
+            case "India":
+                System.out.println("New Delhi\n");
+                break;
 
-        case "USA":
-            System.out.println("Washington DC\n");
-            break;
+            case "USA":
+                System.out.println("Washington DC\n");
+                break;
 
-        case "Australia":
-            System.out.println("Canberra\n");
-            break;
+            case "Australia":
+                System.out.println("Canberra\n");
+                break;
 
-        case "New Zealand":
-            System.out.println("Wellington\n");
-            break;
+            case "New Zealand":
+                System.out.println("Wellington\n");
+                break;
 
-        case "UAE":
-            System.out.println("Abu Dhabi\n");
-            break;
+            case "UAE":
+                System.out.println("Abu Dhabi\n");
+                break;
 
-        default:
-            System.out.println("Please check your Country Name\n");
+            default:
+                System.out.println("Please check your Country Name\n");
         }
         input.close();
     }

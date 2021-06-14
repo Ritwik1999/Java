@@ -1,3 +1,5 @@
+// Enter names like Mr.Ritwik, Dr.Ritwik, etc. And use just ritwik as search input
+
 package strings;
 
 import java.util.Scanner;
@@ -8,8 +10,7 @@ public class SearchNames {
         String names[] = new String[5];
 
         System.out.println("\nEnter 5 names:");
-        for (int i = 0; i < names.length; i++)
-        {
+        for (int i = 0; i < names.length; i++) {
             String name = input.nextLine();
             names[i] = name.split("\\.")[1];
         }
@@ -18,18 +19,15 @@ public class SearchNames {
         String search = input.nextLine().toLowerCase().trim();
         boolean found = false;
 
-        for(String name : names)
-        {
-            if(name.trim().toLowerCase().equals(search))
-            {
+        for (String name : names) {
+            if (name.trim().toLowerCase().equals(search)) {
                 System.out.println("Name found\n");
                 found = true;
                 break;
             }
         }
 
-        if(!found)
-        {
+        if (!found) {
             System.out.println("Name not found\n");
         }
 

@@ -11,16 +11,14 @@ public class CountVowels {
         System.out.print("Enter text: ");
         text = input.nextLine().toLowerCase();
 
-        for (int i = 0; i < text.length(); i++)
-        {
+        for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
-            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
-            {
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
                 countVowels++;
             }
         }
 
         System.out.println("Number of vowels: " + countVowels);
-        input.close();    
+        input.close();
     }
 }

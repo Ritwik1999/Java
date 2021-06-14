@@ -9,19 +9,15 @@ public class CountVIT {
         System.out.print("\nEnter Text: ");
         String text = input.nextLine();
 
-        if (!text.contains("VIT"))
-        {
-            System.out.println("No such word in the sentence\n");
+        if (!text.contains("VIT")) {
+            System.out.println("\"VIT\" does not occur anywhere in the sentence\n");
         }
 
-        else
-        {
+        else {
             int count = 0;
-            for (int i = 0; i < text.length() - 2; i++)
-            {
-                String s = text.substring(i, i+3);
-                if (s.equals("VIT"))
-                {
+            for (int i = 0; i < text.length() - 2; i++) {
+                String s = text.substring(i, i + 3);
+                if (s.equals("VIT")) {
                     count++;
                 }
             }

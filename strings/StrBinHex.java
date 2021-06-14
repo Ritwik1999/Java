@@ -1,3 +1,5 @@
+// This is wrong; correct it
+
 package strings;
 
 import java.util.Scanner;

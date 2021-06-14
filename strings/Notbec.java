@@ -33,7 +33,7 @@ public class Notbec {
 
     public static void sort(String regnos[]) {
         String temp;
-        for (int i = 0; i < regnos.length; i++) {
+        for (int i = 0; i < regnos.length - 1; i++) {
             for (int j = 0; j < regnos.length - 1 - i; j++) {
                 if (regnos[j].compareTo(regnos[j + 1]) > 0) {
                     temp = regnos[j];

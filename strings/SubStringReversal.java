@@ -12,16 +12,13 @@ public class SubStringReversal {
 
         str = "";
 
-        for (int l = 0; l < words.length; l++)
-        {
+        for (int l = 0; l < words.length; l++) {
             String word = words[l];
-            for (int i = word.length()-1; i >= 0; i--)
-            {
-                str = str + word.substring(i, i+1);
+            for (int i = word.length() - 1; i >= 0; i--) {
+                str = str + word.substring(i, i + 1);
             }
 
-            if (l != words.length - 1)
-            {
+            if (l != words.length - 1) {
                 str = str + " ";
             }
         }

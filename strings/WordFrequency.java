@@ -1,3 +1,5 @@
+// This needs some fixes, check line 26 (try doing it some other way)
+
 package strings;
 
 import java.util.Scanner;

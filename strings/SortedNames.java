@@ -11,22 +11,18 @@ public class SortedNames {
         System.out.println("-----------------------");
         System.out.println("Enter 5 names:");
         System.out.println("-----------------------");
-        
-        for (int i = 0; i < 5; i++)
-        {
+
+        for (int i = 0; i < 5; i++) {
             names[i] = input.nextLine();
         }
 
         // Bubble Sort
-        for (int i = 0; i < names.length; i++)
-        {
-            for (int j = 0; j < names.length-1-i; j++)
-            {
-                if (names[j].compareTo(names[j+1]) > 0)
-                {
+        for (int i = 0; i < names.length - 1; i++) {
+            for (int j = 0; j < names.length - 1 - i; j++) {
+                if (names[j].compareTo(names[j + 1]) > 0) {
                     temp = names[j];
-                    names[j] = names[j+1];
-                    names[j+1] = temp;
+                    names[j] = names[j + 1];
+                    names[j + 1] = temp;
                 }
             }
         }
@@ -34,8 +30,7 @@ public class SortedNames {
         System.out.println("-----------------------");
         System.out.println("Sorted names:");
         System.out.println("-----------------------");
-        for (String name : names)
-        {
+        for (String name : names) {
             System.out.println(name);
         }
 
