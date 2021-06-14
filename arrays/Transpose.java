@@ -13,20 +13,16 @@ public class Transpose {
 
         System.out.println("Enter the elements of the matrix:");
 
-        for (int i = 0; i < nrow; i++)
-        {
-            for (int j = 0; j < ncol; j++)
-            {
+        for (int i = 0; i < nrow; i++) {
+            for (int j = 0; j < ncol; j++) {
                 matrix[i][j] = input.nextInt();
             }
         }
 
         System.out.println("The transpose of the matrix is:");
 
-        for (int j = 0; j < ncol; j++)
-        {
-            for (int i = 0; i < nrow; i++)
-            {
+        for (int j = 0; j < ncol; j++) {
+            for (int i = 0; i < nrow; i++) {
                 System.out.print(matrix[i][j] + " ");
             }
 

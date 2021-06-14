@@ -13,28 +13,23 @@ public class BubbleSort {
 
         System.out.print("Enter the elements of the array: ");
 
-        for (int i = 0; i < arr.length; i++)
-        {
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = input.nextInt();
         }
 
-        for (int i = arr.length-1; i > 0; i--)
-        {
-            for (int j = 0; j < i; j++)
-            {
-                if (arr[j] > arr[j+1])
-                {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
             }
         }
 
         System.out.print("The sorted array is: ");
 
-        for (int k : arr)
-        {
+        for (int k : arr) {
             System.err.print(k + " ");
         }
 

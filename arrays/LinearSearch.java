@@ -13,27 +13,23 @@ public class LinearSearch {
 
         System.out.print("Enter the elements of the array: ");
 
-        for (int i = 0; i < arr.length; i++)
-        {
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = input.nextInt();
         }
-        
+
         System.out.print("Enter the element to be searched: ");
         int elem = input.nextInt();
         boolean found = false;
 
-        for (int e : arr)
-        {
-            if (e == elem)
-            {
+        for (int e : arr) {
+            if (e == elem) {
                 System.out.println("The element is present in the array.");
                 found = true;
                 break;
             }
         }
 
-        if (!found)
-        {
+        if (!found) {
             System.out.println("The element is not present in the array.");
         }
 

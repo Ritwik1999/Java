@@ -13,8 +13,7 @@ public class ReverseArray {
 
         System.out.print("Enter the elements of the array: ");
 
-        for (int i = 0; i < arr.length; i++)
-        {
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = input.nextInt();
         }
 
@@ -22,15 +21,13 @@ public class ReverseArray {
 
         int temp;
 
-        for (int k = 0; k < n/2; k++)
-        {
+        for (int k = 0; k < n / 2; k++) {
             temp = arr[k];
-            arr[k] = arr[n-1-k];
-            arr[n-1-k] = temp;
+            arr[k] = arr[n - 1 - k];
+            arr[n - 1 - k] = temp;
         }
 
-        for (int ele : arr)
-        {
+        for (int ele : arr) {
             System.out.print(ele + " ");
         }
 

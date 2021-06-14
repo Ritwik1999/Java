@@ -13,33 +13,26 @@ public class IdentityMatrix {
 
         System.out.println("Enter the elements of the matrix:");
 
-        for (int i = 0; i < order; i++)
-        {
-            for (int j = 0; j < order; j++)
-            {
+        for (int i = 0; i < order; i++) {
+            for (int j = 0; j < order; j++) {
                 matrix[i][j] = input.nextInt();
             }
         }
 
-        for (int i = 0; i < order; i++)
-        {
-            for (int j = 0; j < order; j++)
-            {
-                if ((i != j && matrix[i][j] != 0) || (i == j && matrix[i][j] != 1))
-                {
+        for (int i = 0; i < order; i++) {
+            for (int j = 0; j < order; j++) {
+                if ((i != j && matrix[i][j] != 0) || (i == j && matrix[i][j] != 1)) {
                     is_identity = false;
                     break;
                 }
             }
         }
 
-        if (!is_identity)
-        {
+        if (!is_identity) {
             System.out.println("Not an identity matrix");
         }
 
-        else
-        {
+        else {
             System.out.println("The entered matrix is an identity matrix");
         }
 
