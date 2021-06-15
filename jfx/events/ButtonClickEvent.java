@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class ButtonClickEvent extends Application {
@@ -19,6 +21,8 @@ public class ButtonClickEvent extends Application {
     public void start(Stage primaryStage) throws Exception {
         Button btn = new Button("Click here");
         Label lbl = new Label();
+        lbl.setTextFill(Color.RED);
+        lbl.setFont(new Font("Times New Roman", 20));
 
         btn.setOnAction(new EventHandler<ActionEvent>() {
 

@@ -9,13 +9,14 @@ import javafx.stage.Stage;
 
 public class Fields extends Application {
     public static void main(String[] args) {
-        System.out.println("Launching the app...");   
+        System.out.println("Launching the app...");
         launch();
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         TextField text = new TextField();
+        // setMaxWidth is for only the UI, not the length of the input in the text field
         text.setMaxWidth(100);
         PasswordField password = new PasswordField();
         password.setMaxWidth(300);

@@ -19,12 +19,12 @@ public class GPLayout extends Application {
         Button btn3 = new Button("Click me");
 
         GridPane root = new GridPane(); // it is responsive, unlike HBox and VBox
-        root.add(btn1, 0, 0);   // root.add(Node, columnIndex, rowIndex)
+        root.add(btn1, 0, 0); // root.add(Node, columnIndex, rowIndex)
         root.add(btn2, 1, 1);
         root.add(btn3, 2, 2);
-        root.setHgap(20);
-        root.setVgap(20);
-        // root.setGridLinesVisible(true);
+        // root.setHgap(20);
+        // root.setVgap(20);
+        root.setGridLinesVisible(true);
 
         Scene sc = new Scene(root);
         primaryStage.setScene(sc);

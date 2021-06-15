@@ -1,5 +1,6 @@
 package jfx.uicontrols;
 
+import java.io.File;
 import java.io.FileInputStream;
 
 import javafx.application.Application;
@@ -24,7 +25,8 @@ public class Buttons extends Application {
         btn1.setWrapText(true);
         btn1.setDisable(true);  // disable the button
         // Adding an image on the button
-        FileInputStream fin = new FileInputStream("jfx/images/HBox.jpg");
+        File obj = new File("jfx/images/HBox.jpg");
+        FileInputStream fin = new FileInputStream(obj);
         Image img = new Image(fin);
         ImageView imgview = new ImageView(img);
         Button btn2 = new Button("Clik here", imgview);

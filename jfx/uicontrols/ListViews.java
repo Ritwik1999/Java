@@ -21,6 +21,7 @@ public class ListViews extends Application {
         subjects.getItems().add("Physics");
         subjects.getItems().add("Maths");
         subjects.getItems().add("Chemistry");
+        subjects.getItems().add("Test Subject");
 
         // Add ListView to layout
         HBox root = new HBox(subjects);
@@ -30,6 +31,6 @@ public class ListViews extends Application {
         primaryStage.setHeight(500);
         primaryStage.setWidth(500);
         primaryStage.setScene(sc);
-        primaryStage.show();  
+        primaryStage.show();
     }
 }

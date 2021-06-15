@@ -30,6 +30,5 @@ public class CheckBoxes extends Application {
         primaryStage.setHeight(300);
         primaryStage.setTitle("My App");
         primaryStage.show();
-
     }
 }

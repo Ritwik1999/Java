@@ -31,7 +31,7 @@ public class JFXIntro extends Application {
         // add scene to a stage
         primaryStage.setScene(sc);
         primaryStage.setWidth(500);
-        primaryStage.setHeight(500);    // Fallback dimensions for when the app is not in full screen mode
+        primaryStage.setHeight(500); // Fallback dimensions for when the app is not in full screen mode
         primaryStage.setTitle("My App");
         primaryStage.setFullScreen(true);
         primaryStage.show();

@@ -26,6 +26,10 @@ public class RadioButtonEvent extends Application {
         RadioButton opt2 = new RadioButton("Physics");
         RadioButton opt3 = new RadioButton("Chemistry");
         RadioButton opt4 = new RadioButton("Maths");
+        opt1.setToggleGroup(group);
+        opt2.setToggleGroup(group);
+        opt3.setToggleGroup(group);
+        opt4.setToggleGroup(group);
         Button submit = new Button("Submit");
         Label lbl = new Label();
 
@@ -59,11 +63,6 @@ public class RadioButtonEvent extends Application {
             }
 
         });
-
-        opt1.setToggleGroup(group);
-        opt2.setToggleGroup(group);
-        opt3.setToggleGroup(group);
-        opt4.setToggleGroup(group);
 
         VBox root = new VBox();
         root.getChildren().addAll(opt1, opt2, opt3, opt4, submit, lbl);

@@ -1,13 +1,13 @@
 JavaFX is a set of graphics and media packages that enables developers to design, create, test, debug, and deploy rich client applications that operate consistently across diverse platforms
 
- With JavaFX, you can build many types of applications
+With JavaFX, you can build many types of applications
 
- Typically, they are network-aware applications that are deployed across multiple platforms and display information in a high-performance modern user interface that features audio, video, graphics, and animation.
+Typically, they are network-aware applications that are deployed across multiple platforms and display information in a high-performance modern user interface that features audio, video, graphics, and animation.
 
- Every JavaFX application must 
-    > import javafx.application.Application class
-    > inherit Application class
-    > Override the start method of Application class
+Every JavaFX application must 
+   > import javafx.application.Application class
+   > inherit Application class
+   > Override the start method of Application class
 
 To launch the application, call the launch method from within a method like main. (launch method shouldn't be called more than once, else exception will be thrown)
 

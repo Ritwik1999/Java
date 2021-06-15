@@ -29,6 +29,7 @@ public class RadioButtons extends Application {
         // create a layout
         VBox root = new VBox();
         root.getChildren().addAll(opt1, opt2, opt3, opt4);
+        root.setSpacing(20);
         // add layout to scene
         Scene sc = new Scene(root);
         // add scene to a stage
