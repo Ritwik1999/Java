@@ -11,33 +11,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
 
-/**
- * Servlet implementation class LoginServlet
- */
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
-
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public LoginServlet() {
         super();
     }
 
-    /**
-     * @see Servlet#init(ServletConfig)
-     */
     public void init(ServletConfig config) throws ServletException {
     }
 
-    /**
-     * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
-     *      response)
-     */
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // THIS IS THE FIRST METHOD THAT IS RUN WHEN THIS SERVLET IS USED
         String method = request.getMethod();
         if (method.equals("GET")) {
             doGet(request, response);
@@ -46,19 +30,11 @@ public class LoginServlet extends HttpServlet {
         }
     }
 
-    /**
-     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-     *      response)
-     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.getWriter().append("Served at: ").append(request.getContextPath());
     }
 
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-     *      response)
-     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html");
