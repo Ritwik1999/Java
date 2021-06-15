@@ -4,13 +4,10 @@
 
 package jdbc;
 
-import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 
 public class Delete {
-    public static void main(String[] args)
-            throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException,
-            NoSuchMethodException, SecurityException, ClassNotFoundException {
+    public static void main(String[] args) {
         try {
             Connection conn = null;
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
@@ -26,8 +23,9 @@ public class Delete {
 
             stmt.close();
             conn.close();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println("Exception occurred");
+            System.out.println(e.getClass());
             System.out.println(e.getMessage());
         }
     }

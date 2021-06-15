@@ -1,13 +1,10 @@
 package jdbc;
 
-import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 import java.util.Scanner;
 
 public class DynamicCRUDapp {
-    public static void main(String[] args)
-            throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException,
-            NoSuchMethodException, SecurityException, ClassNotFoundException {
+    public static void main(String[] args) {
 
         try {
             Student s = new Student();
@@ -64,8 +61,7 @@ class Student {
         marks = Integer.parseInt(input.nextLine());
     }
 
-    public void insertStudentRecord() throws InstantiationException, IllegalAccessException, IllegalArgumentException,
-            InvocationTargetException, NoSuchMethodException, SecurityException, ClassNotFoundException, SQLException {
+    public void insertStudentRecord() throws Exception {
 
         DBMSConnection dbmsconnect = new DBMSConnection("jdbc:mysql://localhost:3306/vit", "root", "");
         Connection conn = dbmsconnect.getConnection();
@@ -80,8 +76,7 @@ class Student {
         dbmsconnect.closeConnection(conn, stmt);
     }
 
-    public void updateStudentPassword() throws InstantiationException, IllegalAccessException, IllegalArgumentException,
-            InvocationTargetException, NoSuchMethodException, SecurityException, ClassNotFoundException, SQLException {
+    public void updateStudentPassword() throws Exception {
 
         DBMSConnection dbmsconnect = new DBMSConnection("jdbc:mysql://localhost:3306/vit", "root", "");
         Connection conn = dbmsconnect.getConnection();
@@ -106,8 +101,7 @@ class Student {
         dbmsconnect.closeConnection(conn, stmt);
     }
 
-    public void deleteStudentRecord() throws InstantiationException, IllegalAccessException, IllegalArgumentException,
-            InvocationTargetException, NoSuchMethodException, SecurityException, ClassNotFoundException, SQLException {
+    public void deleteStudentRecord() throws Exception {
 
         DBMSConnection dbmsconnect = new DBMSConnection("jdbc:mysql://localhost:3306/vit", "root", "");
         Connection conn = dbmsconnect.getConnection();
@@ -129,8 +123,7 @@ class Student {
         dbmsconnect.closeConnection(conn, stmt);
     }
 
-    public void searchStudentRecord() throws InstantiationException, IllegalAccessException, IllegalArgumentException,
-            InvocationTargetException, NoSuchMethodException, SecurityException, ClassNotFoundException, SQLException {
+    public void searchStudentRecord() throws Exception {
 
         DBMSConnection dbmsconnect = new DBMSConnection("jdbc:mysql://localhost:3306/vit", "root", "");
         Connection conn = dbmsconnect.getConnection();
@@ -172,8 +165,7 @@ class DBMSConnection {
         this.password = password;
     }
 
-    public Connection getConnection() throws InstantiationException, IllegalAccessException, IllegalArgumentException,
-            InvocationTargetException, NoSuchMethodException, SecurityException, ClassNotFoundException, SQLException {
+    public Connection getConnection() throws Exception {
         Connection conn = null;
         Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
         conn = DriverManager.getConnection(url, username, password);

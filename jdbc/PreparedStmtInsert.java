@@ -1,11 +1,10 @@
 package jdbc;
 
-import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 import java.util.Scanner;
 
 public class PreparedStmtInsert {
-    public static void main(String[] args) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, ClassNotFoundException {
+    public static void main(String[] args) {
         Scanner input = null;
         try {
             input = new Scanner(System.in);
@@ -13,7 +12,7 @@ public class PreparedStmtInsert {
             String name = input.nextLine();
             String password = input.nextLine();
             String country = input.nextLine();
-            int marks= Integer.parseInt(input.nextLine());
+            int marks = Integer.parseInt(input.nextLine());
             input.close();
 
             Connection conn = null;
@@ -31,8 +30,9 @@ public class PreparedStmtInsert {
             System.out.println("Record inserted");
             stmt.close();
             conn.close();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println("Exception occurred");
+            System.out.println(e.getClass());
             System.out.println(e.getMessage());
         }
     }

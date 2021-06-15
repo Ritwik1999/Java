@@ -4,13 +4,10 @@
 
 package jdbc;
 
-import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 
 public class Update {
-    public static void main(String[] args)
-            throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException,
-            NoSuchMethodException, SecurityException, ClassNotFoundException {
+    public static void main(String[] args) {
         try {
             Connection conn = null;
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
@@ -21,13 +18,15 @@ public class Update {
             int rowsAffected;
 
             // updating a record
-            rowsAffected = stmt.executeUpdate("update student set password='newpass',country='NZ' where name='Ritwik Neema';");
+            String sql = "update student set password='newpass',country='NZ' where name='Ritwik Neema';";
+            rowsAffected = stmt.executeUpdate(sql);
             System.out.println(rowsAffected + " record updated");
 
             stmt.close();
             conn.close();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println("Exception occurred");
+            System.out.println(e.getClass());
             System.out.println(e.getMessage());
         }
     }
