@@ -20,4 +20,23 @@
   <url-pattern>/login</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  <servlet-name>secondservlet</servlet-name>
+  <servlet-class>ReadServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>secondservlet</servlet-name>
+  <url-pattern>/read</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>thirdservlet</servlet-name>
+  <servlet-class>ColloquiumServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>thirdservlet</servlet-name>
+  <url-pattern>/colloquium</url-pattern>
+  </servlet-mapping>
 </web-app>
